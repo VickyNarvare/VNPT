@@ -34,7 +34,7 @@ const ProjectItem = ({ project }) => {
       </div>
       <div className={styles.projectLinks}>
         <a href={project.demoLink} className={`${styles.projectBtn} ${styles.btnDemo}`} target="_blank" rel="noopener noreferrer">
-          <FiExternalLink /><span>Demo</span>
+          <FiExternalLink /><span>Live Demo</span>
         </a>
         <a href={project.codeLink} className={`${styles.projectBtn} ${styles.btnCode}`} target="_blank" rel="noopener noreferrer">
           <FiGithub /><span>View Code</span>
@@ -47,6 +47,9 @@ const ProjectItem = ({ project }) => {
     <div className={styles.projectImageWrapper}>
       <div className={styles.projectImage}>
         <img src={project.image} alt={project.imageAlt} loading="lazy" />
+        <div className={styles.imageOverlay}>
+          <span className={styles.overlayTitle}>{project.title}</span>
+        </div>
       </div>
     </div>
   );
