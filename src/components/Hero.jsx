@@ -61,20 +61,21 @@ const Hero = () => {
 
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            Hello, I'm <span className={styles.highlight}>&lt;V<span className="i">i</span>CKY/&gt;</span>
+            HELLO, I'M &lt;<span className={styles.highlight}>VICKY</span>/&gt;
           </h1>
           <p className={styles.heroSubtitle}>
             <span id="typing-text">{displayText}</span>
             <span className={styles.typingCursor}>|</span>
           </p>
           <p className={styles.heroDescription}>
-            Expert Frontend Developer from Indore, India. Welcome to my portfolio! I create beautiful, responsive, and
-            performant web experiences using React, Next.js, JavaScript, HTML5, and CSS3. Specializing in modern web
-            development and UI/UX design.
+            Expert Frontend Developer from Indore, India. I craft beautiful, responsive, and
+            performant web experiences using <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>Next.js</span>, and modern technologies.
           </p>
           <div className={styles.heroButtons}>
-            <a href="#works" className="btn btn-primary">View My Projects</a>
-            <a href="#contact" className="btn btn-secondary">Get In Touch</a>
+            <a href="#works" className={styles.btnPrimary}>
+              View My Projects <span className={styles.arrow}>→</span>
+            </a>
+            <a href="#contact" className={styles.btnSecondary}>Get In Touch</a>
           </div>
         </div>
 
