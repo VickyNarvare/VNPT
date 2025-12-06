@@ -1,5 +1,6 @@
 import { socialLinksData } from '../data';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import styles from '../styles/FloatingSocial.module.css';
 
 const socialIconMap = {
   'bxl-github': FaGithub,
@@ -11,15 +12,15 @@ const socialIconMap = {
 
 const FloatingSocial = () => {
   return (
-    <div className="floating-social">
-      <div className="floating-social-links">
+    <div className={styles.floatingSocial}>
+      <div className={styles.floatingSocialLinks}>
         {socialLinksData.map(social => {
           const IconComponent = socialIconMap[social.icon] || FaGithub;
           return (
             <a
               key={social.name}
               href={social.url}
-              className="floating-social-link"
+              className={styles.floatingSocialLink}
               aria-label={social.name}
               title={social.tooltip}
               target="_blank"

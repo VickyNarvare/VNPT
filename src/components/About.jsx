@@ -1,3 +1,5 @@
+import styles from '../styles/About.module.css';
+
 const About = () => {
   return (
     <section id="about" className="section">
@@ -5,8 +7,8 @@ const About = () => {
         <h2 className="section-title">
           About <span className="accent-text">Me</span>
         </h2>
-        <div className="about-content">
-          <div className="about-text">
+        <div className={styles.aboutContent}>
+          <div className={styles.aboutText}>
             <p>
               Welcome to my portfolio! I'm a passionate frontend developer with a love for creating
               engaging user experiences. As a React & Next.js expert, I bring ideas to life through clean, efficient
@@ -26,7 +28,7 @@ const About = () => {
               to take on new challenges and collaborate with teams to build amazing digital experiences.
             </p>
           </div>
-          <div className="about-image">
+          <div className={styles.aboutImage}>
             <img
               src="/images/VickyNarvare.webp"
               alt="Vicky Narvare - Professional Frontend Developer"

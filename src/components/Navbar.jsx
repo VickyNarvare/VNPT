@@ -3,6 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 import { HiX } from 'react-icons/hi';
 import { FiHome, FiUser, FiCode, FiSettings, FiBriefcase, FiMail } from 'react-icons/fi';
+import styles from '../styles/Navbar.module.css';
 
 const navLinks = [
   { href: '#home', label: 'Home', icon: FiHome },
@@ -25,7 +26,6 @@ const Navbar = () => {
       const docHeight = document.body.offsetHeight - window.innerHeight;
       setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
 
-      // Update active section based on scroll position
       const sections = ['home', 'about', 'skills', 'services', 'works', 'contact'];
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
@@ -62,85 +62,85 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={styles.navbar}>
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
-      <div className="nav-container">
-        <div className="nav-logo">
-          <a href="#home" className="logo-link" onClick={(e) => handleNavClick(e, '#home')}>
-            <span className="logo-text">
-              <span className="logo-bracket">&lt;</span>
-              <span className="logo-name">ViCKY</span>
-              <span className="logo-bracket">/&gt;</span>
+      <div className={styles.navContainer}>
+        <div className={styles.navLogo}>
+          <a href="#home" className={styles.logoLink} onClick={(e) => handleNavClick(e, '#home')}>
+            <span className={styles.logoText}>
+              <span className={styles.logoBracket}>&lt;</span>
+              <span className={styles.logoName}>ViCKY</span>
+              <span className={styles.logoBracket}>/&gt;</span>
             </span>
           </a>
         </div>
 
-        <div className="nav-menu desktop-menu">
-          <ul className="nav-list">
+        <div className={`${styles.navMenu} ${styles.desktopMenu}`}>
+          <ul className={styles.navList}>
             {navLinks.map(link => (
-              <li key={link.href} className="nav-item">
+              <li key={link.href} className={styles.navItem}>
                 <a
                   href={link.href}
-                  className={`nav-link ${activeLink === link.href ? 'active' : ''}`}
+                  className={`${styles.navLink} ${activeLink === link.href ? styles.active : ''}`}
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
-                  <span className="nav-text">{link.label}</span>
-                  <span className="nav-indicator" />
+                  <span className={styles.navText}>{link.label}</span>
+                  <span className={styles.navIndicator} />
                 </a>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="nav-controls">
-          <button className="theme-toggle" aria-label="Toggle theme" onClick={toggleTheme}>
-            <div className="theme-icon">
-              {isDark ? <BsSunFill className="sun-icon" /> : <BsMoonFill className="moon-icon" />}
+        <div className={styles.navControls}>
+          <button className={styles.themeToggle} aria-label="Toggle theme" onClick={toggleTheme}>
+            <div className={styles.themeIcon}>
+              {isDark ? <BsSunFill className={styles.sunIcon} /> : <BsMoonFill className={styles.moonIcon} />}
             </div>
           </button>
 
           <button
-            className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
+            className={`${styles.mobileMenuToggle} ${mobileMenuOpen ? styles.active : ''}`}
             aria-label="Toggle mobile menu"
             onClick={toggleMobileMenu}
           >
-            <span className="hamburger">
-              <span className="hamburger-line" />
-              <span className="hamburger-line" />
-              <span className="hamburger-line" />
+            <span className={styles.hamburger}>
+              <span className={styles.hamburgerLine} />
+              <span className={styles.hamburgerLine} />
+              <span className={styles.hamburgerLine} />
             </span>
           </button>
         </div>
       </div>
 
-      <div className={`mobile-menu-overlay ${mobileMenuOpen ? 'active' : ''}`} onClick={(e) => {
-        if (e.target.classList.contains('mobile-menu-overlay')) {
+      <div className={`${styles.mobileMenuOverlay} ${mobileMenuOpen ? styles.active : ''}`} onClick={(e) => {
+        if (e.target.classList.contains(styles.mobileMenuOverlay)) {
           setMobileMenuOpen(false);
           document.body.style.overflow = '';
         }
       }}>
-        <div className="mobile-menu">
-          <div className="mobile-menu-header">
-            <div className="mobile-logo">
-              <span className="logo-text">
-                <span className="logo-bracket">&lt;</span>
-                <span className="logo-name">ViCKY</span>
-                <span className="logo-bracket">/&gt;</span>
+        <div className={styles.mobileMenu}>
+          <div className={styles.mobileMenuHeader}>
+            <div className={styles.mobileLogo}>
+              <span className={styles.logoText}>
+                <span className={styles.logoBracket}>&lt;</span>
+                <span className={styles.logoName}>ViCKY</span>
+                <span className={styles.logoBracket}>/&gt;</span>
               </span>
             </div>
-            <button className="mobile-menu-close" onClick={() => { setMobileMenuOpen(false); document.body.style.overflow = ''; }}>
+            <button className={styles.mobileMenuClose} onClick={() => { setMobileMenuOpen(false); document.body.style.overflow = ''; }}>
               <HiX />
             </button>
           </div>
-          <nav className="mobile-nav">
-            <ul className="mobile-nav-list">
+          <nav className={styles.mobileNav}>
+            <ul className={styles.mobileNavList}>
               {navLinks.map(link => {
                 const IconComponent = link.icon;
                 return (
-                  <li key={link.href} className="mobile-nav-item">
+                  <li key={link.href} className={styles.mobileNavItem}>
                     <a
                       href={link.href}
-                      className={`mobile-nav-link ${activeLink === link.href ? 'active' : ''}`}
+                      className={`${styles.mobileNavLink} ${activeLink === link.href ? styles.active : ''}`}
                       onClick={(e) => handleNavClick(e, link.href)}
                     >
                       <IconComponent />
