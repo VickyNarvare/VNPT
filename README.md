@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React and Vite. Showcasing frontend development skills, projects, and services.
 
-![Portfolio Preview](public/images/VickyNarvare.webp)
+<img src="public/images/VickyNarvare.webp" alt="Portfolio Preview" width="150" />
 
 ## 🚀 Live Demo
 
@@ -122,6 +122,16 @@ Edit `src/App.css` to customize:
 4. **Services** - Services offered with expandable cards
 5. **Projects** - Portfolio projects with links
 6. **Contact** - Contact form and social links
+
+## 🖼️ Projects Preview
+
+<p>
+  <img src="public/images/project1.webp" alt="Weather App" width="200" />
+  <img src="public/images/project2.webp" alt="ElectraX" width="200" />
+  <img src="public/images/project3.webp" alt="Kalika Construction" width="200" />
+  <img src="public/images/project4.webp" alt="JARVIS AI" width="200" />
+  <img src="public/images/project5.webp" alt="Coffee Cup" width="200" />
+</p>
 
 ## 🎨 Color Scheme
 
