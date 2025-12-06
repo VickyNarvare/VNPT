@@ -2,7 +2,7 @@
 .loadingScreen {
   position: fixed;
   inset: 0;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f8f9fc 0%, #e8ecf4 50%, #f0f4f8 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,98 +22,246 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 30px;
+  gap: 20px;
+  animation: fadeInUp 0.8s ease-out;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Icons ===== */
 .loadingIcons {
   display: flex;
-  gap: 30px;
+  gap: 16px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.loadingIconCircle {
+.loadingIconBox {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-  background-color: #000;
+  border-radius: 16px;
+  background: #1a1a2e;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(64, 112, 244, 0.6);
-  animation: pulseLoading 1s ease-in-out infinite;
   color: #fff;
   font-size: 24px;
+  box-shadow: 0 8px 32px rgba(26, 26, 46, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.loadingIconCircle svg {
-  width: 24px;
-  height: 24px;
+.loadingIconBox svg {
+  width: 26px;
+  height: 26px;
   color: #fff;
 }
 
-@keyframes pulseLoading {
-  0%, 100% {
-    transform: scale(1);
+/* Staggered animation for icons */
+.icon1 {
+  animation: bounceIn 0.6s ease-out 0.2s both;
+}
+
+.icon2 {
+  animation: bounceIn 0.6s ease-out 0.4s both;
+}
+
+.icon3 {
+  animation: bounceIn 0.6s ease-out 0.6s both;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-20px);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 
-.loadingIconCircle i {
-  color: #fff;
-  font-size: 24px;
+/* Hover effect */
+.loadingIconBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(26, 26, 46, 0.4);
 }
 
+/* ===== Name ===== */
 .loadingName {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 700;
-  color: #000;
+  color: #1a1a2e;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "LucyRose", serif;
+  letter-spacing: 2px;
+  animation: fadeIn 0.8s ease-out 0.8s both;
 }
 
+.highlight {
+  color: #1a1a2e;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== Title ===== */
 .loadingTitle {
-  font-size: 52px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   color: #4070f4;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "LatoRegular", sans-serif;
+  animation: fadeIn 0.8s ease-out 1s both;
 }
 
+/* ===== Underline ===== */
+.underline {
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, #4070f4 0%, #1a1a2e 100%);
+  border-radius: 2px;
+  margin-top: 5px;
+  animation: expandWidth 0.8s ease-out 1.2s both;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px;
+  }
+}
+
+/* ===== URL ===== */
 .loadingUrl {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #4070f4;
+  color: #6b7280;
   font-size: 14px;
   font-weight: 500;
+  margin-top: 10px;
+  animation: fadeIn 0.8s ease-out 1.4s both;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #4070f4;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .loadingName {
-    font-size: 30px;
+    font-size: 36px;
+    letter-spacing: 1px;
   }
 
   .loadingTitle {
-    font-size: 38px;
+    font-size: 22px;
   }
 
-  .loadingIconCircle {
+  .loadingIconBox {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+  }
+
+  .loadingIconBox svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .underline {
+    width: 150px;
+  }
+
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .loadingName {
+    font-size: 28px;
+  }
+
+  .loadingTitle {
+    font-size: 18px;
+  }
+
+  .loadingIconBox {
     width: 45px;
     height: 45px;
+    border-radius: 10px;
     font-size: 18px;
   }
 
-  .loadingIconCircle svg {
-    width: 18px;
-    height: 18px;
+  .loadingIconBox svg {
+    width: 20px;
+    height: 20px;
   }
 
-  .loadingIconCircle i {
-    font-size: 18px;
+  .loadingIcons {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .underline {
+    width: 120px;
+  }
+
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 120px;
+    }
+  }
+
+  .loadingUrl {
+    font-size: 12px;
   }
 }
