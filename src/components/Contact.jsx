@@ -33,6 +33,9 @@ const Contact = () => {
     }
     
     toast.warning('Contact section is not working right now. Please try emailing me instead!');
+    
+    // Reset form after submit
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   const copyEmail = async () => {
