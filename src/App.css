@@ -12,7 +12,6 @@
 /* ===== RESET & ROOT ===== */
 :root {
   --body-color: #e4e9f7;
-  --nav-color: #84f29c;
   --side-nav: #fff;
   --text-color: #111;
   --muted: rgba(0, 0, 0, 0.6);
@@ -21,8 +20,6 @@
   --accent-2: #3056d3;
   --card-bg: rgba(255, 255, 255, 0.88);
   --card-border: rgba(16, 24, 40, 0.06);
-  --page-bg-top: #f8fafb;
-  --page-bg-bottom: #f0fff4;
   --max-width: 1200px;
   --radius: 14px;
 }
@@ -657,6 +654,7 @@ body.dark .mobile-menu-header {
   0% {
     transform: translateX(-33.33%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -666,6 +664,7 @@ body.dark .mobile-menu-header {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-33.33%);
   }
@@ -714,32 +713,32 @@ body.dark .tech-tag:hover {
   .tech-marquee-container {
     margin-top: 30px;
   }
-  
+
   .tech-marquee-wrapper {
     margin-bottom: 12px;
   }
-  
+
   .tech-marquee-track {
     gap: 10px;
   }
-  
+
   .tech-tag {
     padding: 6px 12px;
     gap: 6px;
   }
-  
+
   .tech-icon {
     font-size: 16px;
   }
-  
+
   .tech-name {
     font-size: 12px;
   }
-  
+
   .marquee-left {
     animation: marquee-left 20s linear infinite;
   }
-  
+
   .marquee-right {
     animation: marquee-right 20s linear infinite;
   }
@@ -749,32 +748,32 @@ body.dark .tech-tag:hover {
   .tech-marquee-container {
     margin-top: 25px;
   }
-  
+
   .tech-marquee-wrapper {
     margin-bottom: 10px;
   }
-  
+
   .tech-marquee-track {
     gap: 8px;
   }
-  
+
   .tech-tag {
     padding: 5px 10px;
     gap: 5px;
   }
-  
+
   .tech-icon {
     font-size: 14px;
   }
-  
+
   .tech-name {
     font-size: 11px;
   }
-  
+
   .marquee-left {
     animation: marquee-left 18s linear infinite;
   }
-  
+
   .marquee-right {
     animation: marquee-right 18s linear infinite;
   }
@@ -948,7 +947,7 @@ body.dark .tech-tag:hover {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 40px;
 }
@@ -989,7 +988,6 @@ body.dark .tech-tag:hover {
 }
 
 .service-toggle {
-  background: var(--card-bg);
   border: 1px solid var(--card-border);
   width: 40px;
   height: 40px;
@@ -1567,6 +1565,9 @@ body.dark .tech-tag:hover {
 
 .footer-section ul li {
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-section ul li a {
@@ -1699,10 +1700,12 @@ body.dark .tech-tag:hover {
 }
 
 @keyframes pulse-loading {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }

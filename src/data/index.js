@@ -20,7 +20,7 @@ export const technologies = [
   { name: 'Responsive Design', color: '#4CAF50', icon: 'bx-devices' },
   { name: 'Figma', color: '#007AFF', icon: 'bxl-figma' },
   { name: 'VS Code', color: '#007ACC', icon: 'bxl-visual-studio' },
-  { name: 'NPM/Yarn', color: '#CB3837', icon: 'bxl-nodejs' }
+  { name: 'NPM', color: '#CB3837', icon: 'bxl-nodejs' }
 ];
 
 // Projects Data

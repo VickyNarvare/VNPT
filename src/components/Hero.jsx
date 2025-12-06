@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
 import { technologies, typingTexts } from '../data';
 import { 
@@ -7,7 +6,7 @@ import {
 import { 
   SiTailwindcss, SiNextdotjs, SiMysql, SiCanva, SiGreensock, SiSublimetext, SiGooglechrome 
 } from 'react-icons/si';
-import { BiCodeAlt, BiData, BiPalette, BiDevices, BiPlayCircle, BiImage } from 'react-icons/bi';
+import { BiData, BiPalette, BiDevices, BiPlayCircle } from 'react-icons/bi';
 import { VscVscode } from 'react-icons/vsc';
 
 const iconMap = {
@@ -33,40 +32,23 @@ const iconMap = {
   'bx-play-circle': BiPlayCircle,
 };
 
+// Create tripled array for seamless marquee loop
+const tripledTechnologies = [...technologies, ...technologies, ...technologies];
+
+const TechTag = ({ tech }) => {
+  const IconComponent = iconMap[tech.icon];
+  return (
+    <div className="tech-tag">
+      <span className="tech-icon" style={{ color: tech.color }}>
+        {IconComponent ? <IconComponent size={20} /> : tech.name.charAt(0)}
+      </span>
+      <span className="tech-name">{tech.name}</span>
+    </div>
+  );
+};
+
 const Hero = () => {
   const displayText = useTypingEffect(typingTexts);
-  const leftTrackRef = useRef(null);
-  const rightTrackRef = useRef(null);
-
-  useEffect(() => {
-    const populateMarquee = (track) => {
-      if (!track) return;
-      track.innerHTML = '';
-      
-      for (let i = 0; i < 3; i++) {
-        technologies.forEach(tech => {
-          const tag = document.createElement('div');
-          tag.className = 'tech-tag';
-          
-          const iconSpan = document.createElement('span');
-          iconSpan.className = 'tech-icon';
-          iconSpan.style.color = tech.color;
-          iconSpan.innerHTML = `<span style="font-size: 20px; display: flex; align-items: center;">${tech.name.charAt(0)}</span>`;
-          tag.appendChild(iconSpan);
-          
-          const name = document.createElement('span');
-          name.className = 'tech-name';
-          name.textContent = tech.name;
-          tag.appendChild(name);
-          
-          track.appendChild(tag);
-        });
-      }
-    };
-
-    populateMarquee(leftTrackRef.current);
-    populateMarquee(rightTrackRef.current);
-  }, []);
 
   return (
     <section id="home" className="section">
@@ -98,12 +80,20 @@ const Hero = () => {
         <div className="tech-marquee-container">
           <div className="tech-marquee-wrapper">
             <div className="tech-marquee">
-              <div className="tech-marquee-track marquee-left" ref={leftTrackRef} />
+              <div className="tech-marquee-track marquee-left">
+                {tripledTechnologies.map((tech, index) => (
+                  <TechTag key={`left-${index}`} tech={tech} />
+                ))}
+              </div>
             </div>
           </div>
           <div className="tech-marquee-wrapper">
             <div className="tech-marquee">
-              <div className="tech-marquee-track marquee-right" ref={rightTrackRef} />
+              <div className="tech-marquee-track marquee-right">
+                {tripledTechnologies.map((tech, index) => (
+                  <TechTag key={`right-${index}`} tech={tech} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
