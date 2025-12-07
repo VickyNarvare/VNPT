@@ -1,17 +1,18 @@
 import { skillsData } from '../data';
-import { FiCode, FiDatabase, FiFilm, FiGitBranch, FiLayout, FiTerminal } from 'react-icons/fi';
 import styles from '../styles/Skills.module.css';
 
-const iconMap = {
-  'bx-code-alt': FiCode,
-  'bx-data': FiDatabase,
-  'bx-movie-play': FiFilm,
-  'bx-git-branch': FiGitBranch,
-  'bx-palette': FiLayout,
-  'bx-code-curly': FiTerminal,
-};
-
 const Skills = () => {
+  // Generate code-like syntax for each skill category
+  const getCodeSnippet = (category) => {
+    const skills = category.skills.map(s => `"${s.name}"`).join(', ');
+    return {
+      comment: `// ${category.title} technologies`,
+      constLine: `const ${category.title.replace(/[^a-zA-Z]/g, '')} = {`,
+      skills: category.skills,
+      closeBrace: '};'
+    };
+  };
+
   return (
     <section id="skills" className={`section ${styles.skillsSection}`}>
       <div className="container">
@@ -22,20 +23,49 @@ const Skills = () => {
         <p className={styles.skillsSectionSubtitle}>Technologies & tools I work with as a Frontend Developer</p>
 
         <div className={styles.skillsGrid}>
-          {skillsData.map(category => {
-            const IconComponent = iconMap[category.icon] || FiCode;
+          {skillsData.map((category, index) => {
+            const snippet = getCodeSnippet(category);
             return (
-              <div key={category.id} className={styles.skillCard}>
-                <div className={styles.skillIcon}>
-                  <IconComponent />
+              <div key={category.id} className={styles.codeCard}>
+                {/* Window Header */}
+                <div className={styles.codeHeader}>
+                  <div className={styles.windowDots}>
+                    <span className={styles.dotRed}></span>
+                    <span className={styles.dotYellow}></span>
+                    <span className={styles.dotGreen}></span>
+                  </div>
+                  <span className={styles.fileName}>{category.title.toLowerCase().replace(/\s+/g, '-')}.js</span>
                 </div>
-                <h3 className={styles.skillCardTitle}>{category.title}</h3>
-                <div className={styles.skillTagsContainer}>
-                  {category.skills.map(skill => (
-                    <span key={skill.dataSkill} className={styles.skillTag} data-skill={skill.dataSkill}>
-                      {skill.name}
-                    </span>
-                  ))}
+                
+                {/* Code Content */}
+                <div className={styles.codeContent}>
+                  <div className={styles.lineNumbers}>
+                    {Array.from({ length: category.skills.length + 3 }, (_, i) => (
+                      <span key={i}>{i + 1}</span>
+                    ))}
+                  </div>
+                  <div className={styles.codeText}>
+                    <div className={styles.codeLine}>
+                      <span className={styles.comment}>{snippet.comment}</span>
+                    </div>
+                    <div className={styles.codeLine}>
+                      <span className={styles.keyword}>const</span>{' '}
+                      <span className={styles.variable}>{category.title.replace(/[^a-zA-Z]/g, '')}</span>{' '}
+                      <span className={styles.operator}>=</span>{' '}
+                      <span className={styles.bracket}>{'['}</span>
+                    </div>
+                    {category.skills.map((skill, skillIndex) => (
+                      <div key={skill.dataSkill} className={styles.codeLine}>
+                        <span className={styles.indent}></span>
+                        <span className={styles.string}>"{skill.name}"</span>
+                        {skillIndex < category.skills.length - 1 && <span className={styles.punctuation}>,</span>}
+                      </div>
+                    ))}
+                    <div className={styles.codeLine}>
+                      <span className={styles.bracket}>{']'}</span>
+                      <span className={styles.punctuation}>;</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
