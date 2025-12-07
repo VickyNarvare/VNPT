@@ -119,15 +119,39 @@
 }
 
 .viewMore {
-  color: var(--accent);
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
   font-weight: 500;
+  width: fit-content;
   transform: translateY(20px);
-  transition: transform 0.4s ease 0.2s;
+  transition: all 0.4s ease 0.2s;
+}
+
+.viewMore::after {
+  content: '→';
+  font-size: 1rem;
+  transition: transform 0.3s ease;
 }
 
 .projectCard:hover .viewMore {
   transform: translateY(0);
+}
+
+.projectCard:hover .viewMore:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.projectCard:hover .viewMore:hover::after {
+  transform: translateX(4px);
 }
 
 
