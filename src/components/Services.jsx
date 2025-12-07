@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { servicesData } from '../data';
 import { FiCode, FiLayout, FiGrid, FiBox, FiChevronDown } from 'react-icons/fi';
+import SectionHeader from './SectionHeader';
 import styles from '../styles/Services.module.css';
 
 const iconMap = {
@@ -47,14 +48,11 @@ const Services = () => {
   return (
     <section id="services" className={`section ${styles.servicesSection}`}>
       <div className="container">
-        <h2 className={styles.servicesTitle}>
-          My <span>Services</span>
-        </h2>
-        <p className={styles.servicesDescription}>
-          As a dedicated Frontend Developer from Indore, I specialize in building modern, responsive web applications
-          using React, Next.js, and cutting-edge technologies. I transform design concepts into high-performance,
-          user-friendly digital experiences that drive engagement and results.
-        </p>
+        <SectionHeader 
+          title={<>My <span>Services</span></>}
+          subtitle="As a dedicated Frontend Developer from Indore, I specialize in building modern, responsive web applications using React, Next.js, and cutting-edge technologies."
+          bgText="SERVICES"
+        />
         <div className={styles.servicesGrid}>
           {servicesData.map(service => (
             <ServiceCard key={service.id} service={service} />

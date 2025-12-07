@@ -1,0 +1,114 @@
+/* ===== SECTION HEADER WITH BACKGROUND TEXT ===== */
+.sectionHeader {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 40px 0;
+  overflow: visible;
+}
+
+/* Large Background Text */
+.bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 800;
+  font-family: "LucyRose", serif;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.03;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 10px;
+  z-index: 0;
+}
+
+:global(body.dark) .bgText {
+  opacity: 0.05;
+}
+
+/* Main Title */
+.title {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: "LucyRose", serif;
+  z-index: 1;
+  margin-bottom: 0.5rem;
+}
+
+.title span,
+.title :global(span) {
+  color: var(--accent);
+}
+
+/* Subtitle */
+.subtitle {
+  position: relative;
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.6;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .bgText {
+    font-size: 6rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .bgText {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bgText {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .bgText {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

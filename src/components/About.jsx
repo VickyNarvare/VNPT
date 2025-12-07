@@ -1,4 +1,5 @@
 import { FiZap, FiAward, FiGitCommit, FiCode } from 'react-icons/fi';
+import SectionHeader from './SectionHeader';
 import styles from '../styles/About.module.css';
 
 const stats = [
@@ -12,9 +13,10 @@ const About = () => {
   return (
     <section id="about" className="section">
       <div className="container">
-        <h2 className="section-title">
-          About <span className="accent-text">Me</span>
-        </h2>
+        <SectionHeader 
+          title={<>About <span>Me</span></>}
+          bgText="ABOUT"
+        />
         <div className={styles.aboutContent}>
           {/* Left - Image */}
           <div className={styles.aboutImageWrapper}>

@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import { socialLinksData } from '../data';
 import { FiMail, FiPhone, FiMapPin, FiCopy, FiCheckCircle, FiGithub, FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
+import SectionHeader from './SectionHeader';
 import styles from '../styles/Contact.module.css';
 
 const socialIconMap = {
@@ -55,9 +56,10 @@ const Contact = () => {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <h2 className="section-title">
-          Get In <span className="accent-text">Touch</span>
-        </h2>
+        <SectionHeader 
+          title={<>Get In <span>Touch</span></>}
+          bgText="CONTACT"
+        />
 
         <div className={styles.availabilityNotice}>
           <div className={styles.availabilityNoticeIcon}>

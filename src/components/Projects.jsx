@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { projectsData } from '../data';
 import { FiExternalLink, FiGithub, FiX } from 'react-icons/fi';
+import SectionHeader from './SectionHeader';
 import styles from '../styles/Projects.module.css';
 
 const ProjectCard = ({ project, onClick }) => {
@@ -133,12 +134,11 @@ const Projects = () => {
   return (
     <section id="works" className={`section ${styles.worksSection}`}>
       <div className="container">
-        <h2 className={`section-title ${styles.projectsTitle}`}>
-          <span className="accent-text">My Projects</span>
-        </h2>
-        <p className={styles.projectsSubtitle}>
-          Click on any project to see more details
-        </p>
+        <SectionHeader 
+          title={<>My <span>Projects</span></>}
+          subtitle="Click on any project to see more details"
+          bgText="PROJECTS"
+        />
         
         <div className={styles.projectsGrid}>
           {projectsData.map(project => (

@@ -1,4 +1,5 @@
 import { skillsData } from '../data';
+import SectionHeader from './SectionHeader';
 import styles from '../styles/Skills.module.css';
 
 const Skills = () => {
@@ -16,11 +17,11 @@ const Skills = () => {
   return (
     <section id="skills" className={`section ${styles.skillsSection}`}>
       <div className="container">
-        <h2 className={styles.skillsSectionTitle}>
-          My <span>Technical Skills</span>
-        </h2>
-        <div className={styles.skillsTitleUnderline} />
-        <p className={styles.skillsSectionSubtitle}>Technologies & tools I work with as a Frontend Developer</p>
+        <SectionHeader 
+          title={<>My <span>Technical Skills</span></>}
+          subtitle="Technologies & tools I work with as a Frontend Developer"
+          bgText="SKILLS"
+        />
 
         <div className={styles.skillsGrid}>
           {skillsData.map((category, index) => {
