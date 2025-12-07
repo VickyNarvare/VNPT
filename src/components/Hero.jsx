@@ -4,10 +4,19 @@ import { FiGitBranch, FiGithub, FiLayout, FiSmartphone, FiPlay } from 'react-ico
 import { BsMouse } from 'react-icons/bs';
 import { 
   SiHtml5, SiCss3, SiJavascript, SiSass, SiTailwindcss, SiReact, SiNextdotjs,
-  SiFigma, SiNpm, SiSublimetext, SiGooglechrome, SiCanva, SiMysql, SiGreensock
+  SiFigma, SiNpm, SiSublimetext, SiGooglechrome, SiCanva, SiMysql, SiGreensock,
+  SiMongodb, SiExpress, SiNodedotjs
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import styles from '../styles/Hero.module.css';
+
+// MERN Stack icons with colors
+const mernStack = [
+  { icon: SiMongodb, color: '#47A248', name: 'M' },
+  { icon: SiExpress, color: '#000000', name: 'E' },
+  { icon: SiReact, color: '#61DAFB', name: 'R' },
+  { icon: SiNodedotjs, color: '#339933', name: 'N' },
+];
 
 const iconMap = {
   'bxl-html5': SiHtml5,
@@ -66,9 +75,18 @@ const Hero = () => {
             <span id="typing-text">{displayText}</span>
             <span className={styles.typingCursor}>|</span>
           </p>
+          
+          <div className={styles.mernStack}>
+            {mernStack.map((tech, index) => (
+              <div key={index} className={styles.mernIcon} style={{ color: tech.color }}>
+                <tech.icon />
+              </div>
+            ))}
+          </div>
+
           <p className={styles.heroDescription}>
-            Expert Frontend Developer from Indore, India. I craft beautiful, responsive, and
-            performant web experiences using <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>Next.js</span>, and modern technologies.
+            Expert MERN Stack Developer from Indore, India. I craft beautiful, responsive, and
+            performant full-stack web applications using <span className={styles.techHighlight}>MongoDB</span>, <span className={styles.techHighlight}>Express</span>, <span className={styles.techHighlight}>React</span>, and <span className={styles.techHighlight}>Node.js</span>.
           </p>
           <div className={styles.heroButtons}>
             <a href="#works" className={styles.btnPrimary}>
@@ -104,7 +122,6 @@ const Hero = () => {
             <BsMouse />
             <span className={styles.scrollDot}></span>
           </div>
-          <span className={styles.scrollText}>Scroll Down</span>
         </a>
       </div>
     </section>

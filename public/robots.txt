@@ -1,0 +1,17 @@
+# robots.txt for Vicky Narvare Portfolio
+# https://vickynarvare.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vickynarvare.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block unnecessary paths
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /*.json$
+Disallow: /*.config.js$

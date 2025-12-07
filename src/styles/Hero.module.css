@@ -167,6 +167,37 @@
   }
 }
 
+/* ===== MERN STACK ICONS ===== */
+.mernStack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mernIcon {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.mernIcon:hover {
+  transform: translateY(-5px) scale(1.1);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+:global(body.dark) .mernIcon {
+  filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.1));
+}
+
+:global(body.dark) .mernIcon:hover {
+  filter: drop-shadow(0 8px 16px rgba(255, 255, 255, 0.15));
+}
+
 .heroDescription {
   font-size: 1.05rem;
   margin-bottom: 2rem;
@@ -367,6 +398,15 @@
     font-size: 1.1rem;
   }
 
+  .mernStack {
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .mernIcon {
+    font-size: 2.2rem;
+  }
+
   .heroDescription {
     font-size: 0.95rem;
   }
@@ -430,6 +470,15 @@
 
   .heroSubtitle {
     font-size: 0.95rem;
+  }
+
+  .mernStack {
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .mernIcon {
+    font-size: 1.8rem;
   }
 
   .heroDescription {
@@ -505,7 +554,6 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-top: 40px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
