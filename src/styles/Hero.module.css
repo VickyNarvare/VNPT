@@ -494,3 +494,109 @@
     font-size: 0.8rem;
   }
 }
+
+/* ===== SCROLL DOWN MOUSE ===== */
+.scrollDown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scrollDown:hover {
+  transform: translateY(5px);
+}
+
+.scrollMouse {
+  position: relative;
+  font-size: 2.2rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+  animation: bounceMouse 2s ease-in-out infinite;
+}
+
+@keyframes bounceMouse {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.scrollDot {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 4px;
+  animation: scrollDot 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+.scrollText {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scrollDown:hover .scrollMouse {
+  color: var(--accent-2);
+  animation: bounceMouse 1s ease-in-out infinite;
+}
+
+.scrollDown:hover .scrollDot {
+  background: var(--accent-2);
+}
+
+@media (max-width: 768px) {
+  .scrollDown {
+    margin-top: 30px;
+  }
+
+  .scrollMouse {
+    font-size: 1.8rem;
+  }
+
+  .scrollDot {
+    width: 3px;
+    height: 6px;
+  }
+
+  .scrollText {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollDown {
+    margin-top: 25px;
+  }
+
+  .scrollMouse {
+    font-size: 1.6rem;
+  }
+}

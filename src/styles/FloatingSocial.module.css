@@ -1,44 +1,249 @@
-/* ===== FLOATING SOCIAL ===== */
+/* ===== FLOATING SOCIAL ICONS ===== */
 .floatingSocial {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
-  z-index: 100;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
 }
 
 .floatingSocialLinks {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: auto;
 }
 
 .floatingSocialLink {
+  width: 45px;
+  height: 45px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: white;
-  border-radius: 50%;
+  color: var(--text-color);
   text-decoration: none;
+  font-size: 1.3rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(64, 112, 244, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.floatingSocialLink:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.floatingSocialLink:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.floatingSocialLink:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.floatingSocialLink:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.floatingSocialLink:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .floatingSocialLink:hover {
-  transform: scale(1.15);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.floatingSocialLink:hover i {
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+@keyframes iconBounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.floatingSocialLink:active {
+  transform: translateY(-1px) scale(1.05);
+}
+
+/* Tooltip Styles - Desktop Only */
+.tooltip {
+  position: absolute;
+  right: 50px;
+  background: var(--card-bg, rgba(30, 30, 30, 0.95));
+  color: var(--text-color);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  border: 1px solid var(--card-border, rgba(255, 255, 255, 0.1));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: var(--card-bg, rgba(30, 30, 30, 0.95));
+}
+
+.floatingSocialLink:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* GitHub */
+.floatingSocialLink:nth-child(1):hover {
+  background: #24292e;
+  color: white;
+  border-color: #24292e;
+}
+
+.floatingSocialLink:nth-child(1):hover .tooltip {
+  background: #24292e;
+  color: white;
+  border-color: #24292e;
+}
+
+.floatingSocialLink:nth-child(1):hover .tooltip::after {
+  border-left-color: #24292e;
+}
+
+/* LinkedIn */
+.floatingSocialLink:nth-child(2):hover {
+  background: #0077b5;
+  color: white;
+  border-color: #0077b5;
+}
+
+.floatingSocialLink:nth-child(2):hover .tooltip {
+  background: #0077b5;
+  color: white;
+  border-color: #0077b5;
+}
+
+.floatingSocialLink:nth-child(2):hover .tooltip::after {
+  border-left-color: #0077b5;
+}
+
+/* Facebook */
+.floatingSocialLink:nth-child(3):hover {
+  background: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+.floatingSocialLink:nth-child(3):hover .tooltip {
+  background: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+.floatingSocialLink:nth-child(3):hover .tooltip::after {
+  border-left-color: #1877f2;
+}
+
+/* Instagram */
+.floatingSocialLink:nth-child(4):hover {
+  background: linear-gradient(135deg, #e1306c 0%, #c13584 50%, #833ab4 100%);
+  color: white;
+  border-color: #e1306c;
+}
+
+.floatingSocialLink:nth-child(4):hover .tooltip {
+  background: linear-gradient(135deg, #e1306c 0%, #c13584 50%, #833ab4 100%);
+  color: white;
+  border-color: #e1306c;
+}
+
+.floatingSocialLink:nth-child(4):hover .tooltip::after {
+  border-left-color: #c13584;
+}
+
+/* WhatsApp */
+.floatingSocialLink:nth-child(5):hover {
+  background: #25d366;
+  color: white;
+  border-color: #25d366;
+}
+
+.floatingSocialLink:nth-child(5):hover .tooltip {
+  background: #25d366;
+  color: white;
+  border-color: #25d366;
+}
+
+.floatingSocialLink:nth-child(5):hover .tooltip::after {
+  border-left-color: #25d366;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .floatingSocial {
-    left: 10px;
-    bottom: 10px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .floatingSocialLink {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  /* Hide tooltip on mobile for floating social */
+  .tooltip {
+    display: none !important;
   }
 }

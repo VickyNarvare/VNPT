@@ -1,11 +1,11 @@
-import { FiZap, FiAward, FiGitCommit, FiHeart } from 'react-icons/fi';
+import { FiZap, FiAward, FiGitCommit, FiCode } from 'react-icons/fi';
 import styles from '../styles/About.module.css';
 
 const stats = [
   { icon: FiZap, value: '2+', label: 'Years Experience' },
   { icon: FiAward, value: '20+', label: 'Projects Done' },
   { icon: FiGitCommit, value: '150+', label: 'Git Commits' },
-  { icon: FiHeart, value: '100%', label: 'Client Satisfaction' },
+  { icon: FiCode, value: '25K+', label: 'Lines of Code' },
 ];
 
 const About = () => {

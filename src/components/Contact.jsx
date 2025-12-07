@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { socialLinksData } from '../data';
-import { FiMail, FiPhone, FiMapPin, FiCopy, FiCheckCircle } from 'react-icons/fi';
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FiMail, FiPhone, FiMapPin, FiCopy, FiCheckCircle, FiGithub, FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 import styles from '../styles/Contact.module.css';
 
 const socialIconMap = {
-  'bxl-github': FaGithub,
-  'bxl-linkedin': FaLinkedin,
-  'bxl-facebook': FaFacebook,
-  'bxl-instagram': FaInstagram,
+  'bxl-github': FiGithub,
+  'bxl-linkedin': FiLinkedin,
+  'bxl-facebook': FiFacebook,
+  'bxl-instagram': FiInstagram,
   'bxl-whatsapp': FaWhatsapp,
 };
 
@@ -93,10 +93,11 @@ const Contact = () => {
             </div>
             <div className={styles.socialLinks}>
               {contactSocials.map(social => {
-                const IconComponent = socialIconMap[social.icon] || FaGithub;
+                const IconComponent = socialIconMap[social.icon] || FiGithub;
                 return (
-                  <a key={social.name} href={social.url} className={styles.socialLink} aria-label={social.name} target="_blank" rel="noopener noreferrer">
+                  <a key={social.name} href={social.url} className={styles.socialLink} aria-label={social.name} data-tooltip={social.tooltip} target="_blank" rel="noopener noreferrer">
                     <IconComponent />
+                    <span className={styles.tooltip}>{social.tooltip}</span>
                   </a>
                 );
               })}

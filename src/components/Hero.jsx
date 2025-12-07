@@ -1,36 +1,35 @@
 import { useTypingEffect } from '../hooks/useTypingEffect';
 import { technologies, typingTexts } from '../data';
+import { FiGitBranch, FiGithub, FiLayout, FiSmartphone, FiPlay } from 'react-icons/fi';
+import { BsMouse } from 'react-icons/bs';
 import { 
-  FaHtml5, FaCss3Alt, FaJs, FaSass, FaReact, FaGitAlt, FaGithub, FaFigma, FaNodeJs 
-} from 'react-icons/fa';
-import { 
-  SiTailwindcss, SiNextdotjs, SiCanva, SiGreensock, SiSublimetext, SiGooglechrome 
+  SiHtml5, SiCss3, SiJavascript, SiSass, SiTailwindcss, SiReact, SiNextdotjs,
+  SiFigma, SiNpm, SiSublimetext, SiGooglechrome, SiCanva, SiMysql, SiGreensock
 } from 'react-icons/si';
-import { BiData, BiPalette, BiDevices, BiPlayCircle } from 'react-icons/bi';
 import { VscVscode } from 'react-icons/vsc';
 import styles from '../styles/Hero.module.css';
 
 const iconMap = {
-  'bxl-html5': FaHtml5,
-  'bxl-css3': FaCss3Alt,
-  'bxl-javascript': FaJs,
-  'bxl-sass': FaSass,
+  'bxl-html5': SiHtml5,
+  'bxl-css3': SiCss3,
+  'bxl-javascript': SiJavascript,
+  'bxl-sass': SiSass,
   'bxl-tailwind-css': SiTailwindcss,
-  'bxl-react': FaReact,
+  'bxl-react': SiReact,
   'bx-code-alt': SiNextdotjs,
-  'bxl-git': FaGitAlt,
-  'bxl-github': FaGithub,
-  'bxl-figma': FaFigma,
-  'bxl-nodejs': FaNodeJs,
+  'bxl-git': FiGitBranch,
+  'bxl-github': FiGithub,
+  'bxl-figma': SiFigma,
+  'bxl-nodejs': SiNpm,
   'bx-code': SiSublimetext,
   'bxl-chrome': SiGooglechrome,
-  'bx-data': BiData,
+  'bx-data': SiMysql,
   'bx-image': SiCanva,
   'bx-movie-play': SiGreensock,
-  'bx-palette': BiPalette,
-  'bx-devices': BiDevices,
+  'bx-palette': FiLayout,
+  'bx-devices': FiSmartphone,
   'bxl-visual-studio': VscVscode,
-  'bx-play-circle': BiPlayCircle,
+  'bx-play-circle': FiPlay,
 };
 
 // Create tripled array for seamless marquee loop
@@ -99,6 +98,14 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        <a href="#about" className={styles.scrollDown} aria-label="Scroll down">
+          <div className={styles.scrollMouse}>
+            <BsMouse />
+            <span className={styles.scrollDot}></span>
+          </div>
+          <span className={styles.scrollText}>Scroll Down</span>
+        </a>
       </div>
     </section>
   );

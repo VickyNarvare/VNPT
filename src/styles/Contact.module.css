@@ -118,6 +118,7 @@
 }
 
 .socialLink {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,6 +133,94 @@
 
 .socialLink:hover {
   transform: scale(1.15) rotate(5deg);
+}
+
+/* Tooltip Styles - Desktop Only */
+.tooltip {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: var(--card-bg, rgba(30, 30, 30, 0.95));
+  color: var(--text-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  border: 1px solid var(--card-border, rgba(255, 255, 255, 0.1));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--card-bg, rgba(30, 30, 30, 0.95));
+}
+
+.socialLink:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* GitHub */
+.socialLink:nth-child(1):hover .tooltip {
+  background: #24292e;
+  color: white;
+  border-color: #24292e;
+}
+
+.socialLink:nth-child(1):hover .tooltip::after {
+  border-top-color: #24292e;
+}
+
+/* LinkedIn */
+.socialLink:nth-child(2):hover .tooltip {
+  background: #0077b5;
+  color: white;
+  border-color: #0077b5;
+}
+
+.socialLink:nth-child(2):hover .tooltip::after {
+  border-top-color: #0077b5;
+}
+
+/* Facebook */
+.socialLink:nth-child(3):hover .tooltip {
+  background: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+.socialLink:nth-child(3):hover .tooltip::after {
+  border-top-color: #1877f2;
+}
+
+/* WhatsApp (4th in Contact - Instagram is filtered out) */
+.socialLink:nth-child(4):hover .tooltip {
+  background: #25d366;
+  color: white;
+  border-color: #25d366;
+}
+
+.socialLink:nth-child(4):hover .tooltip::after {
+  border-top-color: #25d366;
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    display: none;
+  }
 }
 
 .contactForm {
