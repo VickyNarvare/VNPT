@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ThemeProvider } from './context/ThemeContext';
@@ -16,6 +16,14 @@ import FloatingSocial from './components/FloatingSocial';
 
 function App() {
   const [loading, setLoading] = useState(true);
+
+  // Scroll to top on page load/reload
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  }, []);
 
   return (
     <ThemeProvider>

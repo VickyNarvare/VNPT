@@ -28,7 +28,15 @@ export const projectsData = [
   {
     id: 1,
     title: "Weather Application",
-    description: "A modern Weather Application that provides real-time weather information for any location. Features current temperature, humidity, wind speed, and 5-day forecast with beautiful UI.",
+    description: "A modern Weather Application that provides real-time weather information for any location worldwide. This project demonstrates my ability to work with external APIs and create intuitive user interfaces.",
+    features: [
+      "Real-time weather data fetching using Weather API",
+      "Current temperature, humidity, and wind speed display",
+      "5-day weather forecast with detailed information",
+      "Location search with auto-complete functionality",
+      "Beautiful, responsive UI with smooth animations",
+      "Dynamic weather icons based on conditions"
+    ],
     image: "/images/project1.webp",
     imageAlt: "Weather Application by Vicky Narvare",
     demoLink: "https://weatherwebsite2.vercel.app",
@@ -39,7 +47,15 @@ export const projectsData = [
   {
     id: 2,
     title: "ElectraX Website",
-    description: "A futuristic website featuring stunning GSAP animations and smooth transitions. Showcases scroll-triggered animations, parallax effects, and modern aesthetics with vibrant colors.",
+    description: "A futuristic, visually stunning website showcasing advanced GSAP animations and modern web design techniques. This project highlights my expertise in creating immersive, interactive web experiences.",
+    features: [
+      "Scroll-triggered animations using GSAP ScrollTrigger",
+      "Smooth parallax effects throughout the page",
+      "Custom cursor animations and interactions",
+      "Vibrant color schemes with gradient effects",
+      "Responsive design for all screen sizes",
+      "Performance-optimized animations"
+    ],
     image: "/images/project2.webp",
     imageAlt: "ElectraX Website by Vicky Narvare",
     demoLink: "https://electraxbyvicky.netlify.app",
@@ -50,7 +66,15 @@ export const projectsData = [
   {
     id: 3,
     title: "Kalika Construction",
-    description: "A professional construction company website showcasing services, projects, and company information. Features clean, modern design with responsive layout and portfolio sections.",
+    description: "A professional construction company website designed to showcase services, completed projects, and company information. This project demonstrates my ability to create clean, business-focused websites.",
+    features: [
+      "Professional and clean design aesthetic",
+      "Services showcase with detailed descriptions",
+      "Project portfolio with image galleries",
+      "Contact form with validation",
+      "Fully responsive across all devices",
+      "SEO-optimized structure"
+    ],
     image: "/images/project3.webp",
     imageAlt: "Kalika Construction Website by Vicky Narvare",
     demoLink: "https://kalikaconstruction2.netlify.app",
@@ -61,18 +85,34 @@ export const projectsData = [
   {
     id: 4,
     title: "JARVIS AI",
-    description: "An innovative AI-powered demo platform inspired by JARVIS. Features voice command recognition, interactive AI responses, and a sleek dark-themed interface with real-time functionality.",
+    description: "An innovative AI-powered demo platform inspired by Iron Man's JARVIS. This project showcases my creativity in building interactive, futuristic interfaces with voice recognition capabilities.",
+    features: [
+      "Voice command recognition system",
+      "Interactive AI response animations",
+      "Sleek dark-themed futuristic interface",
+      "Real-time voice-to-text conversion",
+      "Custom audio visualizations",
+      "Smooth transition effects"
+    ],
     image: "/images/project4.webp",
     imageAlt: "JARVIS AI Platform by Vicky Narvare",
     demoLink: "https://jarvisbyvicky.netlify.app",
     codeLink: "https://github.com/VickyNarvare/Jarvis-website",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Web Speech API"],
     layout: "right"
   },
   {
     id: 5,
     title: "Coffee Cup - Cafe Website",
-    description: "A full-featured coffee shop website with online ordering system, shopping cart, order tracking, and admin dashboard. Built with React and Vite, featuring a modern UI with Tailwind CSS and complete e-commerce functionality.",
+    description: "A full-featured coffee shop e-commerce website with complete ordering functionality. Built with React 19 and modern technologies, this project demonstrates my full-stack development capabilities.",
+    features: [
+      "Complete e-commerce functionality",
+      "Shopping cart with real-time updates",
+      "Order tracking system",
+      "Admin dashboard for management",
+      "Modern UI with Tailwind CSS v4",
+      "State management using Context API"
+    ],
     image: "/images/project5.webp",
     imageAlt: "Coffee Cup Cafe Website by Vicky Narvare",
     demoLink: "https://coffeeap.vercel.app/",
