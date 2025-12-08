@@ -78,7 +78,7 @@ const Contact = () => {
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <FiMail />
-                <span>vickynarvare51@gmail.com</span>
+                <span> vickynarvare51@gmail.com</span>
                 <button className={styles.copyEmailBtn} onClick={copyEmail} aria-label="Copy email">
                   {copied ? <FiCheckCircle /> : <FiCopy />}
                   <span className={styles.copyText}>{copied ? 'Copied!' : 'Copy'}</span>
@@ -86,11 +86,11 @@ const Contact = () => {
               </div>
               <div className={styles.contactItem}>
                 <FiPhone />
-                <span>+91 6267607029</span>
+                <span> +91 6267607029</span>
               </div>
               <div className={styles.contactItem}>
                 <FiMapPin />
-                <span>Indore, India</span>
+                <span> Indore, India</span>
               </div>
             </div>
             <div className={styles.socialLinks}>
