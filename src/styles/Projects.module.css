@@ -57,6 +57,44 @@
   padding: 3rem 0;
 }
 
+/* Show More Button */
+.showMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.showMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.showMoreBtn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(64, 112, 244, 0.3);
+}
+
+.showMoreBtn svg {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.showMoreBtn:hover svg {
+  transform: translateY(3px);
+}
+
 /* Projects Grid */
 .projectsGrid {
   display: grid;
@@ -72,7 +110,7 @@
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   background: var(--card-bg);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,7 +131,7 @@
 .cardImage img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   object-position: center center;
 }
 
@@ -101,13 +139,7 @@
 .cardOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.7) 40%,
-    rgba(0, 0, 0, 0.3) 70%,
-    transparent 100%
-  );
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -474,7 +506,7 @@
   }
 
   .projectCard {
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
   }
 
   .cardTitle {

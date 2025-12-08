@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { projectsData } from '../data';
-import { FiExternalLink, FiGithub, FiX } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiX, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import styles from '../styles/Projects.module.css';
 
@@ -106,9 +106,12 @@ const ProjectModal = ({ project, onClose }) => {
 };
 
 
+const INITIAL_SHOW = 6;
+
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [showAll, setShowAll] = useState(false);
   const scrollPositionRef = useRef(0);
 
   // Get unique technologies for filter
@@ -127,6 +130,10 @@ const Projects = () => {
       )
     );
   }, [activeFilter]);
+
+  // Show limited or all projects
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, INITIAL_SHOW);
+  const hasMore = filteredProjects.length > INITIAL_SHOW;
 
   const openModal = (project) => {
     scrollPositionRef.current = window.scrollY;
@@ -169,7 +176,7 @@ const Projects = () => {
         </div>
         
         <div className={styles.projectsGrid}>
-          {filteredProjects.map(project => (
+          {displayedProjects.map(project => (
             <ProjectCard 
               key={project.id} 
               project={project} 
@@ -180,6 +187,21 @@ const Projects = () => {
 
         {filteredProjects.length === 0 && (
           <p className={styles.noProjects}>No projects found with this technology.</p>
+        )}
+
+        {hasMore && (
+          <div className={styles.showMoreWrapper}>
+            <button 
+              className={styles.showMoreBtn}
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? (
+                <>Show Less <FiChevronUp /></>
+              ) : (
+                <>Show More<FiChevronDown /></>
+              )}
+            </button>
+          </div>
         )}
       </div>
 
