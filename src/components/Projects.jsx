@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { projectsData } from '../data';
 import { FiExternalLink, FiGithub, FiX } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
@@ -108,10 +108,27 @@ const ProjectModal = ({ project, onClose }) => {
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeFilter, setActiveFilter] = useState('All');
   const scrollPositionRef = useRef(0);
 
+  // Get unique technologies for filter
+  const filterOptions = useMemo(() => {
+    const allTechs = projectsData.flatMap(p => p.technologies);
+    const mainTechs = ['All', 'HTML', 'React'];
+    return mainTechs.filter(tech => tech === 'All' || allTechs.some(t => t.toLowerCase().includes(tech.toLowerCase())));
+  }, []);
+
+  // Filter projects based on selected technology
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'All') return projectsData;
+    return projectsData.filter(project => 
+      project.technologies.some(tech => 
+        tech.toLowerCase().includes(activeFilter.toLowerCase())
+      )
+    );
+  }, [activeFilter]);
+
   const openModal = (project) => {
-    // Save scroll position before opening modal
     scrollPositionRef.current = window.scrollY;
     document.body.style.overflow = 'hidden';
     document.body.style.paddingRight = '0px';
@@ -122,7 +139,6 @@ const Projects = () => {
     setSelectedProject(null);
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
-    // Use requestAnimationFrame to ensure DOM updates before scrolling
     requestAnimationFrame(() => {
       window.scrollTo({
         top: scrollPositionRef.current,
@@ -140,8 +156,20 @@ const Projects = () => {
           bgText="PROJECTS"
         />
         
+        <div className={styles.filterButtons}>
+          {filterOptions.map(filter => (
+            <button 
+              key={filter}
+              className={`${styles.filterBtn} ${activeFilter === filter ? styles.active : ''}`}
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+        
         <div className={styles.projectsGrid}>
-          {projectsData.map(project => (
+          {filteredProjects.map(project => (
             <ProjectCard 
               key={project.id} 
               project={project} 
@@ -149,6 +177,10 @@ const Projects = () => {
             />
           ))}
         </div>
+
+        {filteredProjects.length === 0 && (
+          <p className={styles.noProjects}>No projects found with this technology.</p>
+        )}
       </div>
 
       {selectedProject && (

@@ -117,8 +117,27 @@ export const projectsData = [
     imageAlt: "Coffee Cup Cafe Website by Vicky Narvare",
     demoLink: "https://coffeeap.vercel.app/",
     codeLink: "https://github.com/VickyNarvare/coffeeapp",
-    technologies: ["React v19", "Vite", "Tailwind CSS v4", "JavaScript", "Context API"],
+    technologies: ["React v19", "Vite", "Tailwind CSS v4","Context API"],
     layout: "left"
+  },
+  {
+    id: 6,
+    title: "Foodie Delight - Food Ordering App",
+    description: "A modern, responsive food ordering web application with complete e-commerce functionality. Features cart management, order tracking, favorites, promo codes, and real-time order status updates with a beautiful UI.",
+    features: [
+      "Menu browsing with search & filter by category",
+      "Shopping cart with localStorage persistence",
+      "Order tracking with visual timeline status",
+      "Promo codes system (SAVE10, SAVE20, FLAT400)",
+      "Favorites & recently viewed items",
+      "Form validation for delivery details"
+    ],
+    image: "/images/project6.webp",
+    imageAlt: "Foodie Delight Food Ordering App by Vicky Narvare",
+    demoLink: "https://foodiedelightbyvicky.vercel.app",
+    codeLink: "https://github.com/VickyNarvare/Advance-Food-Ordering-App",
+    technologies: ["React v19", "Vite", "Tailwind CSS v4", "React Router", "Context API"],
+    layout: "right"
   }
 ];
 
