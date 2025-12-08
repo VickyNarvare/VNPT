@@ -39,7 +39,7 @@ export const projectsData = [
     ],
     image: "/images/project7.webp",
     imageAlt: "FitnessClub Gym Website by Vicky Narvare",
-    demoLink: "#",
+    demoLink: "https://gymwebsite-vicky.vercel.app",
     codeLink: "https://github.com/VickyNarvare/GYM",
     technologies: ["HTML", "CSS", "JavaScript", "Flexbox", "CSS Grid"],
     layout: "left"
@@ -58,7 +58,7 @@ export const projectsData = [
     ],
     image: "/images/project6.webp",
     imageAlt: "Foodie Delight Food Ordering App by Vicky Narvare",
-    demoLink: "#",
+    demoLink: "https://foodwebsite-vicky.vercel.app",
     codeLink: "https://github.com/VickyNarvare/Advance-Food-Ordering-App",
     technologies: ["React v19", "Vite", "Tailwind CSS v4", "React Router", "Context API"],
     layout: "right"
