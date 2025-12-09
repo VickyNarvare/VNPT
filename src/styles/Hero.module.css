@@ -464,12 +464,12 @@
   }
 
   .heroTitle {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     letter-spacing: 0.5px;
   }
 
   .heroSubtitle {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .mernStack {
@@ -478,11 +478,12 @@
   }
 
   .mernIcon {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .heroDescription {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
   }
 
   .availabilityBadge {

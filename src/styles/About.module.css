@@ -94,7 +94,7 @@
   line-height: 1.9;
   margin-bottom: 1.5rem;
   color: var(--text-color);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .aboutText p:last-child {
@@ -142,7 +142,7 @@
 .statLabel {
   font-size: 14px;
   color: var(--text-color);
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -229,15 +229,16 @@
   }
 
   .expNumber {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .expText {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .aboutText p {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    opacity: 0.9;
   }
 
   .statsContainer {

@@ -244,7 +244,7 @@ body.dark {
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .btn {
@@ -256,7 +256,7 @@ body.dark {
 
 @media (max-width: 360px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .btn {

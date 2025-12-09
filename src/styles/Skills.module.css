@@ -164,7 +164,7 @@
 .fileName {
   font-size: 0.8rem;
   color: var(--text-color);
-  opacity: 0.6;
+  opacity: 0.8;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 
@@ -190,7 +190,7 @@
   border-right: 1px solid var(--card-border);
   min-width: 45px;
   color: var(--text-color);
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 :global(body.dark) .lineNumbers {

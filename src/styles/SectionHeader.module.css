@@ -18,7 +18,7 @@
   font-family: "LucyRose", serif;
   text-transform: uppercase;
   color: var(--text-color);
-  opacity: 0.03;
+  opacity: 0.08;
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
@@ -27,7 +27,7 @@
 }
 
 :global(body.dark) .bgText {
-  opacity: 0.05;
+  opacity: 0.08;
 }
 
 /* Main Title */
@@ -51,7 +51,7 @@
   position: relative;
   font-size: 1rem;
   color: var(--text-color);
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: 1;
   max-width: 600px;
   margin: 0 auto;
