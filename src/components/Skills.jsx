@@ -19,7 +19,7 @@ const Skills = () => {
       <div className="container">
         <SectionHeader 
           title={<>My <span>Technical Skills</span></>}
-          subtitle="Technologies & tools I work with as a Frontend Developer"
+          subtitle="Technologies & tools I work with as a MERN Stack Developer"
           bgText="SKILLS"
         />
 

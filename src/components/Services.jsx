@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { servicesData } from '../data';
-import { FiCode, FiLayout, FiGrid, FiBox, FiChevronDown } from 'react-icons/fi';
+import { FiCode, FiLayout, FiGrid, FiBox, FiChevronDown, FiServer, FiEdit3, FiCloud } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import styles from '../styles/Services.module.css';
 
@@ -9,6 +9,9 @@ const iconMap = {
   'bx-palette': FiLayout,
   'bx-grid-alt': FiGrid,
   'bx-code-block': FiBox,
+  'bx-server': FiServer,
+  'bx-brush': FiEdit3,
+  'bx-cloud-upload': FiCloud,
 };
 
 const ServiceCard = ({ service }) => {
@@ -50,7 +53,7 @@ const Services = () => {
       <div className="container">
         <SectionHeader 
           title={<>My <span>Services</span></>}
-          subtitle="As a dedicated Frontend Developer from Indore, I specialize in building modern, responsive web applications using React, Next.js, and cutting-edge technologies."
+          subtitle="As a dedicated MERN Stack Developer from Indore, I specialize in building full-stack web applications using MongoDB, Express.js, React, and Node.js."
           bgText="SERVICES"
         />
         <div className={styles.servicesGrid} itemScope itemType="https://schema.org/ItemList">

@@ -44,13 +44,13 @@ const About = () => {
             <meta itemProp="name" content="Vicky Narvare" />
             <meta itemProp="jobTitle" content="MERN Stack Developer" />
             <p>
-              Welcome to my portfolio! I'm a passionate <span className={styles.highlight} itemProp="jobTitle">MERN Developer</span> with a love for creating engaging user experiences. As a React & Next.js expert, I bring ideas to life through clean, efficient code and thoughtful design.
+              Welcome to my portfolio! I'm a passionate <span className={styles.highlight} itemProp="jobTitle">MERN Stack Developer</span> specializing in building full-stack web applications. I work with <span className={styles.highlight}>MongoDB, Express.js, React, and Node.js</span> to create scalable and efficient solutions.
             </p>
             <p>
-              Based in <span className={styles.highlight} itemProp="address" itemScope itemType="https://schema.org/PostalAddress"><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>, I specialize in building responsive and performant web applications that not only look great but also provide exceptional user experiences with cutting-edge technologies.
+              Based in <span className={styles.highlight} itemProp="address" itemScope itemType="https://schema.org/PostalAddress"><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>, I specialize in building end-to-end web applications from database design to user interface. I love creating RESTful APIs, implementing authentication systems, and building responsive frontends.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enjoying a good cup of coffee while sketching out new ideas. Always eager to take on new challenges!
+              When I'm not coding, you can find me exploring new backend technologies, learning about system design, or contributing to open source projects. Always eager to take on challenging full-stack projects!
             </p>
           </div>
         </article>

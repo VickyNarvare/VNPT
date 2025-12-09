@@ -39,6 +39,16 @@
   margin-top: 30px;
 }
 
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 /* Code Card - Glassmorphism Style */
 .codeCard {
   position: relative;
@@ -52,7 +62,17 @@
   border: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  animation: float 4s ease-in-out infinite;
 }
+
+/* Staggered animation delays for each card */
+.codeCard:nth-child(1) { animation-delay: 0s; }
+.codeCard:nth-child(2) { animation-delay: 0.5s; }
+.codeCard:nth-child(3) { animation-delay: 1s; }
+.codeCard:nth-child(4) { animation-delay: 1.5s; }
+.codeCard:nth-child(5) { animation-delay: 2s; }
+.codeCard:nth-child(6) { animation-delay: 2.5s; }
+.codeCard:nth-child(7) { animation-delay: 3s; }
 
 .codeCard::before {
   content: '';
@@ -87,11 +107,12 @@
 }
 
 .codeCard:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-15px) scale(1.02);
   box-shadow: 
     0 25px 50px rgba(64, 112, 244, 0.2),
     inset 0 0 0 1px rgba(64, 112, 244, 0.3);
   border-color: rgba(64, 112, 244, 0.4);
+  animation-play-state: paused;
 }
 
 :global(body.dark) .codeCard:hover {
@@ -203,6 +224,7 @@
 
 .variable {
   color: #267f99;
+  font-weight: 900;
 }
 
 .operator {
@@ -215,6 +237,7 @@
 
 .string {
   color: #a31515;
+  font-weight: 600;
 }
 
 .punctuation {
