@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 import { HiX } from 'react-icons/hi';
-import { FiHome, FiUser, FiCode, FiSettings, FiBriefcase, FiMail } from 'react-icons/fi';
+import { FiHome, FiUser, FiCode, FiSettings, FiBriefcase, FiMail, FiSend } from 'react-icons/fi';
 import styles from '../styles/Navbar.module.css';
 
 const navLinks = [
@@ -93,12 +93,17 @@ const Navbar = () => {
         </div>
 
         <div className={styles.navControls}>
+         
+
           <button className={styles.themeToggle} aria-label="Toggle theme" onClick={toggleTheme}>
             <div className={styles.themeIcon}>
               {isDark ? <BsSunFill className={styles.sunIcon} /> : <BsMoonFill className={styles.moonIcon} />}
             </div>
           </button>
-
+ <a href="#contact" className={styles.hireMeBtn} onClick={(e) => handleNavClick(e, '#contact')}>
+            <FiSend className={styles.hireMeIcon} />
+            <span>Hire Me</span>
+          </a>
           <button
             className={`${styles.mobileMenuToggle} ${mobileMenuOpen ? styles.active : ''}`}
             aria-label="Toggle mobile menu"
@@ -150,6 +155,10 @@ const Navbar = () => {
                 );
               })}
             </ul>
+            <a href="#contact" className={styles.mobileHireMeBtn} onClick={(e) => handleNavClick(e, '#contact')}>
+              <FiSend />
+              <span>Hire Me</span>
+            </a>
           </nav>
         </div>
       </div>

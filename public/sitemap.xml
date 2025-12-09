@@ -1,38 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vickynarvare.vercel.app/</loc>
-    <lastmod>2024-12-07</lastmod>
+    <loc>https://vicky-narvare.vercel.app/</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/VickyNarvare.webp</image:loc>
+      <image:title>Vicky Narvare - MERN Stack Developer</image:title>
+      <image:caption>Professional photo of Vicky Narvare, Expert MERN Stack Developer from Indore, India</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://vickynarvare.vercel.app/#about</loc>
-    <lastmod>2024-12-07</lastmod>
+    <loc>https://vicky-narvare.vercel.app/#about</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vickynarvare.vercel.app/#skills</loc>
-    <lastmod>2024-12-07</lastmod>
+    <loc>https://vicky-narvare.vercel.app/#skills</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vickynarvare.vercel.app/#services</loc>
-    <lastmod>2024-12-07</lastmod>
+    <loc>https://vicky-narvare.vercel.app/#services</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vickynarvare.vercel.app/#works</loc>
-    <lastmod>2024-12-07</lastmod>
+    <loc>https://vicky-narvare.vercel.app/#works</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/project1.webp</image:loc>
+      <image:title>Project 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/project2.webp</image:loc>
+      <image:title>Project 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/project3.webp</image:loc>
+      <image:title>Project 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/project4.webp</image:loc>
+      <image:title>Project 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/project5.webp</image:loc>
+      <image:title>Project 5</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/project6.webp</image:loc>
+      <image:title>Project 6</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vicky-narvare.vercel.app/images/project7.webp</image:loc>
+      <image:title>Project 7</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://vickynarvare.vercel.app/#contact</loc>
-    <lastmod>2024-12-07</lastmod>
+    <loc>https://vicky-narvare.vercel.app/#contact</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

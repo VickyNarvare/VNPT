@@ -6,23 +6,41 @@ import styles from '../styles/Projects.module.css';
 
 const ProjectCard = ({ project, onClick }) => {
   return (
-    <div className={styles.projectCard} onClick={() => onClick(project)}>
-      <div className={styles.cardImage}>
-        <img src={project.image} alt={project.imageAlt} loading="lazy" />
-        <div className={styles.cardOverlay}>
-          <h3 className={styles.cardTitle}>{project.title}</h3>
+    <article 
+      className={styles.projectCard} 
+      onClick={() => onClick(project)}
+      itemScope 
+      itemType="https://schema.org/CreativeWork"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && onClick(project)}
+      aria-label={`View details for ${project.title}`}
+    >
+      <figure className={styles.cardImage}>
+        <img 
+          src={project.image} 
+          alt={project.imageAlt} 
+          loading="lazy" 
+          itemProp="image"
+          width="400"
+          height="300"
+        />
+        <figcaption className={styles.cardOverlay}>
+          <h3 className={styles.cardTitle} itemProp="name">{project.title}</h3>
           <div className={styles.cardTech}>
             {project.technologies.slice(0, 3).map(tech => (
-              <span key={tech} className={styles.techBadge}>{tech}</span>
+              <span key={tech} className={styles.techBadge} itemProp="keywords">{tech}</span>
             ))}
             {project.technologies.length > 3 && (
               <span className={styles.techBadge}>+{project.technologies.length - 3}</span>
             )}
           </div>
           <span className={styles.viewMore}>Click to view details</span>
-        </div>
-      </div>
-    </div>
+        </figcaption>
+      </figure>
+      <meta itemProp="description" content={project.description} />
+      <link itemProp="url" href={project.demoLink} />
+    </article>
   );
 };
 
@@ -155,7 +173,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="works" className={`section ${styles.worksSection}`}>
+    <section id="works" className={`section ${styles.worksSection}`} aria-labelledby="projects-heading">
       <div className="container">
         <SectionHeader 
           title={<>My <span>Projects</span></>}

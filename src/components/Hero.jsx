@@ -89,10 +89,10 @@ const Hero = () => {
             performant full-stack web applications using <span className={styles.techHighlight}>MongoDB</span>, <span className={styles.techHighlight}>Express</span>, <span className={styles.techHighlight}>React</span>, and <span className={styles.techHighlight}>Node.js</span>.
           </p>
           <div className={styles.heroButtons}>
-            <a href="#works" className={styles.btnPrimary}>
-              View My Projects <span className={styles.arrow}>→</span>
+            <a href="#contact" className={styles.btnPrimary}>
+              Hire Me <span className={styles.arrow}>→</span>
             </a>
-            <a href="#contact" className={styles.btnSecondary}>Get In Touch</a>
+            <a href="#works" className={styles.btnSecondary}>View My Projects</a>
           </div>
         </div>
 

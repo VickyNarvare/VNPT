@@ -16,17 +16,17 @@ const ServiceCard = ({ service }) => {
   const IconComponent = iconMap[service.icon] || FiCode;
 
   return (
-    <div className={`${styles.serviceCard} ${expanded ? styles.expanded : ''}`}>
+    <article className={`${styles.serviceCard} ${expanded ? styles.expanded : ''}`} itemProp="item" itemScope itemType="https://schema.org/Service">
       <div className={styles.serviceHeader}>
-        <div className={styles.serviceIcon}>
+        <div className={styles.serviceIcon} aria-hidden="true">
           <IconComponent />
         </div>
-        <button className={styles.serviceToggle} aria-label="Toggle service details" onClick={() => setExpanded(!expanded)}>
+        <button className={styles.serviceToggle} aria-label="Toggle service details" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
           <FiChevronDown className={styles.serviceArrow} />
         </button>
       </div>
-      <h3 className={styles.serviceTitle}>{service.title}</h3>
-      <p className={styles.serviceDesc}>{service.description}</p>
+      <h3 className={styles.serviceTitle} itemProp="name">{service.title}</h3>
+      <p className={styles.serviceDesc} itemProp="description">{service.description}</p>
       <div className={styles.serviceDetails}>
         <h4 className={styles.servicesIncludeTitle}>Services Include:</h4>
         <ul className={styles.servicesList}>
@@ -40,22 +40,25 @@ const ServiceCard = ({ service }) => {
         <button className={styles.serviceLinkExpand} onClick={() => setExpanded(true)}>Click for details</button>
         <a href="#contact" className={styles.serviceBtn}>Custom Quote</a>
       </div>
-    </div>
+    </article>
   );
 };
 
 const Services = () => {
   return (
-    <section id="services" className={`section ${styles.servicesSection}`}>
+    <section id="services" className={`section ${styles.servicesSection}`} aria-labelledby="services-heading">
       <div className="container">
         <SectionHeader 
           title={<>My <span>Services</span></>}
           subtitle="As a dedicated Frontend Developer from Indore, I specialize in building modern, responsive web applications using React, Next.js, and cutting-edge technologies."
           bgText="SERVICES"
         />
-        <div className={styles.servicesGrid}>
-          {servicesData.map(service => (
-            <ServiceCard key={service.id} service={service} />
+        <div className={styles.servicesGrid} itemScope itemType="https://schema.org/ItemList">
+          {servicesData.map((service, index) => (
+            <div key={service.id} itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+              <meta itemProp="position" content={String(index + 1)} />
+              <ServiceCard service={service} />
+            </div>
           ))}
         </div>
       </div>

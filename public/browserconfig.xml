@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="/images/VickyNarvare.webp"/>
+      <square150x150logo src="/images/VickyNarvare.webp"/>
+      <square310x310logo src="/images/VickyNarvare.webp"/>
+      <wide310x150logo src="/images/VickyNarvare.webp"/>
+      <TileColor>#4070f4</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>

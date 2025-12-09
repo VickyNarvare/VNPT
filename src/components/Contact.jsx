@@ -54,7 +54,7 @@ const Contact = () => {
   const contactSocials = socialLinksData.filter(s => s.name !== 'Instagram');
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section" aria-labelledby="contact-heading">
       <div className="container">
         <SectionHeader 
           title={<>Get In <span>Touch</span></>}
@@ -75,24 +75,25 @@ const Contact = () => {
           <div className={styles.contactInfo}>
             <h3>Let's work together!</h3>
             <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
-            <div className={styles.contactDetails}>
+            <address className={styles.contactDetails} itemScope itemType="https://schema.org/Person">
+              <meta itemProp="name" content="Vicky Narvare" />
               <div className={styles.contactItem}>
-                <FiMail />
-                <span> vickynarvare51@gmail.com</span>
-                <button className={styles.copyEmailBtn} onClick={copyEmail} aria-label="Copy email">
+                <FiMail aria-hidden="true" />
+                <a href="mailto:vickynarvare51@gmail.com" itemProp="email">vickynarvare51@gmail.com</a>
+                <button className={styles.copyEmailBtn} onClick={copyEmail} aria-label="Copy email address">
                   {copied ? <FiCheckCircle /> : <FiCopy />}
                   <span className={styles.copyText}>{copied ? 'Copied!' : 'Copy'}</span>
                 </button>
               </div>
               <div className={styles.contactItem}>
-                <FiPhone />
-                <span> +91 6267607029</span>
+                <FiPhone aria-hidden="true" />
+                <a href="tel:+916267607029" itemProp="telephone">+91 6267607029</a>
               </div>
-              <div className={styles.contactItem}>
-                <FiMapPin />
-                <span> Indore, India</span>
+              <div className={styles.contactItem} itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                <FiMapPin aria-hidden="true" />
+                <span><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>
               </div>
-            </div>
+            </address>
             <div className={styles.socialLinks}>
               {contactSocials.map(social => {
                 const IconComponent = socialIconMap[social.icon] || FiGithub;
