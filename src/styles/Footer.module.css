@@ -8,15 +8,7 @@
   z-index: 1;
 }
 
-.footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 0;
-}
+/* Grid background removed - using simple background */
 
 .footer .container {
   position: relative;

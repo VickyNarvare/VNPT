@@ -40,6 +40,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Disable smooth scroll on mobile for better performance */
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   min-height: 100vh;
   width: 100%;
@@ -101,14 +108,7 @@ body.dark {
   background-color: var(--body-color);
 }
 
-.section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-}
+/* Grid background removed - using simple background */
 
 .section .container {
   position: relative;
