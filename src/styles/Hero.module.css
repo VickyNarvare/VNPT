@@ -210,8 +210,11 @@
 }
 
 .techHighlight {
-  color: var(--accent);
   font-weight: 600;
+  background: linear-gradient(135deg, #4070f4 0%, #9370db 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .heroButtons {
