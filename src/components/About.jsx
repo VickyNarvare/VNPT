@@ -4,9 +4,9 @@ import styles from '../styles/About.module.css';
 
 const stats = [
   { icon: FiZap, value: '2+', label: 'Years Experience' },
-  { icon: FiAward, value: '20+', label: 'Projects Done' },
-  { icon: FiGitCommit, value: '150+', label: 'Git Commits' },
-  { icon: FiCode, value: '25K+', label: 'Lines of Code' },
+  { icon: FiAward, value: '25+', label: 'Projects Done' },
+  { icon: FiGitCommit, value: '200+', label: 'Git Commits' },
+  { icon: FiCode, value: '100K+', label: 'Lines of Code' },
 ];
 
 const About = () => {
