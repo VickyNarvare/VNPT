@@ -19,7 +19,8 @@ const ProjectCard = ({ project, onClick }) => {
       <figure className={styles.cardImage}>
         <img 
           src={project.image} 
-          alt={project.imageAlt} 
+          alt={project.imageAlt}
+          title={project.title}
           loading="lazy" 
           itemProp="image"
           width="400"
@@ -71,7 +72,7 @@ const ProjectModal = ({ project, onClose }) => {
         </button>
         
         <div className={styles.modalImage}>
-          <img src={project.image} alt={project.imageAlt} />
+          <img src={project.image} alt={project.imageAlt} title={project.title} />
         </div>
         
         <div className={styles.modalBody}>

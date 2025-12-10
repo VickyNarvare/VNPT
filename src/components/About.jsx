@@ -26,6 +26,7 @@ const About = () => {
                 <img
                   src="/images/VickyNarvare.webp"
                   alt="Vicky Narvare - Professional MERN Stack Developer from Indore, India"
+                  title="Vicky Narvare - MERN Stack Developer"
                   loading="eager"
                   itemProp="image"
                   width="300"
