@@ -10,6 +10,8 @@ import Skills from './components/Skills';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import FAQ from './components/FAQ';
+import Resume from './components/Resume';
 import Footer from './components/Footer';
 import FloatingSocial from './components/FloatingSocial';
 // import './App.css';
@@ -37,6 +39,8 @@ function App() {
         <Skills />
         <Services />
         <Projects />
+        <FAQ />
+        <Resume />
         <Contact />
         <Footer />
       </main>
