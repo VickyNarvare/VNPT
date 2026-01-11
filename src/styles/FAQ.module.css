@@ -8,7 +8,7 @@
 }
 
 .faqItem {
-  background: var(--card-bg);
+  /* background: var(--card-bg); */
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   overflow: hidden;

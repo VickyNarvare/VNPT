@@ -12,6 +12,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import FAQ from './components/FAQ';
 import Resume from './components/Resume';
+import GitHubActivity from './components/GitHubActivity';
 import Footer from './components/Footer';
 import FloatingSocial from './components/FloatingSocial';
 // import './App.css';
@@ -41,6 +42,7 @@ function App() {
         <Projects />
         <FAQ />
         <Resume />
+        <GitHubActivity />
         <Contact />
         <Footer />
       </main>
