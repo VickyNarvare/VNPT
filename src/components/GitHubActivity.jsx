@@ -22,10 +22,21 @@ const GitHubActivity = () => {
       
       // Fetch latest repositories
       const reposResponse = await fetch(
-        `${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=4`
+        `${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=4`,
+        {
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+          }
+        }
       );
       
-      if (!reposResponse.ok) throw new Error('Failed to fetch repositories');
+      console.log('GitHub API Response Status:', reposResponse.status);
+      
+      if (!reposResponse.ok) {
+        const errorText = await reposResponse.text();
+        console.error('GitHub API Error Response:', errorText);
+        throw new Error(`GitHub API Error: ${reposResponse.status} - ${errorText}`);
+      }
       
       const reposData = await reposResponse.json();
       setRepos(reposData);
@@ -34,7 +45,12 @@ const GitHubActivity = () => {
       const commitsPromises = reposData.slice(0, 4).map(async (repo) => {
         try {
           const commitsResponse = await fetch(
-            `${GITHUB_API_BASE}/repos/${GITHUB_USERNAME}/${repo.name}/commits?per_page=2`
+            `${GITHUB_API_BASE}/repos/${GITHUB_USERNAME}/${repo.name}/commits?per_page=2`,
+            {
+              headers: {
+                'Accept': 'application/vnd.github.v3+json',
+              }
+            }
           );
           if (commitsResponse.ok) {
             const commitsData = await commitsResponse.json();
