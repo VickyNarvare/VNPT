@@ -42,7 +42,6 @@ function App() {
         <Projects />
         <FAQ />
         <Resume />
-        <GitHubActivity />
         <Contact />
         <Footer />
       </main>
