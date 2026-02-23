@@ -14,19 +14,15 @@ import FAQ from './components/FAQ';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 import FloatingSocial from './components/FloatingSocial';
-// import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
-
-  // Scroll to top on page load/reload
   useEffect(() => {
     window.scrollTo(0, 0);
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
   }, []);
-
   return (
     <ThemeProvider>
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
