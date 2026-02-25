@@ -2,7 +2,7 @@
 .loadingScreen {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #e4e9f7 0%, #f0f4f8 50%, #e8ecf4 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e0f2fe 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 :global(body.dark) .loadingScreen {
-  background: linear-gradient(135deg, #0f1112 0%, #18191a 50%, #242526 100%);
+  background: linear-gradient(135deg, #0a0f1e 0%, #111827 50%, #0c2340 100%);
 }
 
 .loadingScreen::before {
@@ -22,12 +22,12 @@
   position: absolute;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(64, 112, 244, 0.08) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
   animation: rotate 20s linear infinite;
 }
 
 :global(body.dark) .loadingScreen::before {
-  background: radial-gradient(circle at 50% 50%, rgba(110, 168, 255, 0.12) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
 }
 
 .loadingScreen::after {
@@ -35,15 +35,15 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(64, 112, 244, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(48, 86, 211, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 50%);
   animation: pulse 4s ease-in-out infinite;
 }
 
 :global(body.dark) .loadingScreen::after {
   background: 
-    radial-gradient(circle at 20% 80%, rgba(110, 168, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(74, 110, 247, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.12) 0%, transparent 50%);
 }
 
 @keyframes rotate {
@@ -153,21 +153,21 @@
 .loadingName {
   font-size: 56px;
   font-weight: 700;
-  color: #111;
+  color: #0f172a;
   margin: 0;
   font-family: "LucyRose", serif;
   letter-spacing: 3px;
   animation: fadeIn 1s ease-out 0.8s both;
-  text-shadow: 0 2px 20px rgba(64, 112, 244, 0.15);
+  text-shadow: 0 2px 20px rgba(14, 165, 233, 0.15);
 }
 
 :global(body.dark) .loadingName {
-  color: #fff;
-  text-shadow: 0 2px 20px rgba(110, 168, 255, 0.2);
+  color: #f8fafc;
+  text-shadow: 0 2px 20px rgba(14, 165, 233, 0.2);
 }
 
 .highlight {
-  background: linear-gradient(135deg, #4070f4 0%, #3056d3 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -176,7 +176,7 @@
 }
 
 :global(body.dark) .highlight {
-  background: linear-gradient(135deg, #6ea8ff 0%, #4a6ef7 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -206,7 +206,7 @@
 .loadingTitle {
   font-size: 32px;
   font-weight: 600;
-  background: linear-gradient(90deg, #4070f4 0%, #3056d3 100%);
+  background: linear-gradient(90deg, #0ea5e9 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -217,7 +217,7 @@
 }
 
 :global(body.dark) .loadingTitle {
-  background: linear-gradient(90deg, #6ea8ff 0%, #4a6ef7 100%);
+  background: linear-gradient(90deg, #0ea5e9 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -225,10 +225,10 @@
 
 @keyframes glow {
   0%, 100% {
-    filter: drop-shadow(0 0 10px rgba(64, 112, 244, 0.4));
+    filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.4));
   }
   50% {
-    filter: drop-shadow(0 0 20px rgba(48, 86, 211, 0.6));
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.6));
   }
 }
 
@@ -462,23 +462,23 @@
 
 .progressRing {
   transform: rotate(-90deg);
-  filter: drop-shadow(0 0 30px rgba(64, 112, 244, 0.6));
+  filter: drop-shadow(0 0 30px rgba(14, 165, 233, 0.5));
   animation: ringRotate 3s linear infinite;
 }
 
 :global(body.dark) .progressRing {
-  filter: drop-shadow(0 0 35px rgba(110, 168, 255, 0.7));
+  filter: drop-shadow(0 0 35px rgba(14, 165, 233, 0.6));
 }
 
 @keyframes ringRotate {
   0% {
-    filter: drop-shadow(0 0 30px rgba(64, 112, 244, 0.6));
+    filter: drop-shadow(0 0 30px rgba(14, 165, 233, 0.5));
   }
   50% {
-    filter: drop-shadow(0 0 40px rgba(48, 86, 211, 0.8));
+    filter: drop-shadow(0 0 40px rgba(168, 85, 247, 0.7));
   }
   100% {
-    filter: drop-shadow(0 0 30px rgba(64, 112, 244, 0.6));
+    filter: drop-shadow(0 0 30px rgba(14, 165, 233, 0.5));
   }
 }
 
@@ -500,11 +500,11 @@
 .progressRingCircle {
   transition: stroke-dashoffset 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   stroke-linecap: round;
-  filter: drop-shadow(0 0 15px rgba(64, 112, 244, 0.8));
+  filter: drop-shadow(0 0 15px rgba(14, 165, 233, 0.8));
 }
 
 :global(body.dark) .progressRingCircle {
-  filter: drop-shadow(0 0 20px rgba(110, 168, 255, 0.9));
+  filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.9));
 }
 
 .circleContent {
@@ -528,7 +528,7 @@
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #4070f4 0%, #3056d3 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
@@ -537,7 +537,7 @@
   color: #fff;
   font-size: 18px;
   box-shadow: 
-    0 4px 16px rgba(64, 112, 244, 0.4),
+    0 4px 16px rgba(14, 165, 233, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -545,10 +545,10 @@
 }
 
 :global(body.dark) .circleContent .loadingIconBox {
-  background: linear-gradient(135deg, #6ea8ff 0%, #4a6ef7 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
-    0 4px 16px rgba(110, 168, 255, 0.5),
+    0 4px 16px rgba(14, 165, 233, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
@@ -556,13 +556,13 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #3056d3 0%, #4070f4 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #0ea5e9 100%);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 :global(body.dark) .circleContent .loadingIconBox::before {
-  background: linear-gradient(135deg, #4a6ef7 0%, #6ea8ff 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #0ea5e9 100%);
 }
 
 .circleContent .loadingIconBox svg {
@@ -581,7 +581,7 @@
 .progressText {
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, #4070f4 0%, #3056d3 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -591,7 +591,7 @@
 }
 
 :global(body.dark) .progressText {
-  background: linear-gradient(135deg, #6ea8ff 0%, #4a6ef7 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -610,10 +610,10 @@
 
 @keyframes textPulse {
   0%, 100% {
-    filter: drop-shadow(0 0 5px rgba(64, 112, 244, 0.5));
+    filter: drop-shadow(0 0 5px rgba(14, 165, 233, 0.5));
   }
   50% {
-    filter: drop-shadow(0 0 10px rgba(48, 86, 211, 0.8));
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.8));
   }
 }
 

@@ -15,7 +15,6 @@ export const technologies = [
   { name: 'GitHub', color: '#6e5494', icon: 'bxl-github' },
   { name: 'MySQL', color: '#4479A1', icon: 'bx-data' },
   { name: 'GSAP', color: '#D9B310', icon: 'bx-movie-play' },
-  { name: 'Postman', color: '#FF6C37', icon: 'bx-send' },
   { name: 'Figma', color: '#007AFF', icon: 'bxl-figma' },
   { name: 'VS Code', color: '#007ACC', icon: 'bxl-visual-studio' },
   { name: 'NPM', color: '#CB3837', icon: 'bxl-nodejs' },

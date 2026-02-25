@@ -155,24 +155,50 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  padding: 0.65rem 1.3rem;
+  background: var(--gradient-primary);
   color: white;
-  border-radius: 25px;
+  border-radius: var(--radius);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  box-shadow: 0 4px 15px rgba(64, 112, 244, 0.3);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.hireMeBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.hireMeBtn:active::before {
+  width: 300px;
+  height: 300px;
 }
 
 .hireMeBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(64, 112, 244, 0.4);
+  box-shadow: var(--shadow-lg);
+}
+
+.hireMeBtn:active {
+  transform: translateY(0);
 }
 
 .hireMeIcon {
   font-size: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .mobileMenuToggle {
@@ -331,19 +357,43 @@
   gap: 0.75rem;
   margin-top: 2rem;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: var(--gradient-primary);
   color: white;
-  border-radius: 30px;
+  border-radius: var(--radius);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  box-shadow: 0 4px 20px rgba(64, 112, 244, 0.35);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.mobileHireMeBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.mobileHireMeBtn:active::before {
+  width: 400px;
+  height: 400px;
 }
 
 .mobileHireMeBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(64, 112, 244, 0.45);
+  box-shadow: var(--shadow-lg);
+}
+
+.mobileHireMeBtn:active {
+  transform: translateY(-1px);
 }
 
 /* ===== RESPONSIVE ===== */

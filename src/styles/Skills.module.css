@@ -108,18 +108,14 @@
 
 .codeCard:hover {
   transform: translateY(-15px) scale(1.02);
-  box-shadow: 
-    0 25px 50px rgba(64, 112, 244, 0.2),
-    inset 0 0 0 1px rgba(64, 112, 244, 0.3);
-  border-color: rgba(64, 112, 244, 0.4);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
   animation-play-state: paused;
 }
 
 :global(body.dark) .codeCard:hover {
-  box-shadow: 
-    0 25px 50px rgba(64, 112, 244, 0.25),
-    inset 0 0 0 1px rgba(64, 112, 244, 0.2);
-  border-color: rgba(64, 112, 244, 0.3);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
 }
 
 /* Window Header */

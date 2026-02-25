@@ -11,11 +11,15 @@
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--transition-smooth);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
 }
 
 .faqItem:hover {
   border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .faqQuestion {

@@ -65,13 +65,14 @@
 .serviceIcon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  border-radius: 12px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 24px;
+  box-shadow: var(--shadow-sm);
 }
 
 .serviceToggle {
@@ -83,13 +84,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--transition-smooth);
   background: transparent;
 }
 
 .serviceToggle:hover {
   background: var(--accent);
   border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .serviceToggle:hover .serviceArrow {
@@ -199,19 +201,20 @@
 }
 
 .serviceBtn {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: var(--gradient-primary);
   color: #fff;
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   text-decoration: none;
   font-weight: 600;
   font-size: 12px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
 }
 
 .serviceBtn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(64, 112, 244, 0.3);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 /* ===== RESPONSIVE ===== */

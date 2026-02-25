@@ -20,17 +20,69 @@
 
 /* ===== CSS Variables ===== */
 :root {
-  --body-color: #e4e9f7;
-  --side-nav: #fff;
-  --text-color: #111;
-  --muted: rgba(0, 0, 0, 0.6);
-  --main-color: #3056d3;
-  --accent: #4070f4;
-  --accent-2: #3056d3;
-  --card-bg: rgba(255, 255, 255, 0.493);
-  --card-border: rgba(16, 24, 40, 0.06);
+  /* Modern Light Theme Colors */
+  --body-color: #ffffff;
+  --side-nav: #ffffff;
+  --text-color: #0f172a;
+  --text-secondary: #475569;
+  --muted: rgba(15, 23, 42, 0.6);
+  
+  /* Primary Colors - Modern Purple/Blue */
+  --primary-50: #f0f9ff;
+  --primary-100: #e0f2fe;
+  --primary-200: #bae6fd;
+  --primary-300: #7dd3fc;
+  --primary-400: #38bdf8;
+  --primary-500: #0ea5e9;
+  --primary-600: #0284c7;
+  --primary-700: #0369a1;
+  --primary-800: #075985;
+  --primary-900: #0c4a6e;
+  
+  /* Accent Colors - Vibrant Purple */
+  --accent-50: #faf5ff;
+  --accent-100: #f3e8ff;
+  --accent-200: #e9d5ff;
+  --accent-300: #d8b4fe;
+  --accent-400: #c084fc;
+  --accent-500: #a855f7;
+  --accent-600: #9333ea;
+  --accent-700: #7e22ce;
+  --accent-800: #6b21a8;
+  --accent-900: #581c87;
+  
+  /* Main Theme Colors */
+  --main-color: #0ea5e9;
+  --accent: #0ea5e9;
+  --accent-2: #38bdf8;
+  --accent-3: #0284c7;
+  --accent-purple: #a855f7;
+  --accent-purple-light: #c084fc;
+  
+  /* Background Colors */
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-bg-hover: rgba(255, 255, 255, 1);
+  --card-border: rgba(14, 165, 233, 0.1);
+  --page-bg-top: #f8fafc;
+  --page-bg-bottom: #f1f5f9;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(14, 165, 233, 0.08), 0 1px 2px rgba(14, 165, 233, 0.06);
+  --shadow-md: 0 4px 6px rgba(14, 165, 233, 0.1), 0 2px 4px rgba(14, 165, 233, 0.06);
+  --shadow-lg: 0 10px 15px rgba(14, 165, 233, 0.12), 0 4px 6px rgba(14, 165, 233, 0.08);
+  --shadow-xl: 0 20px 25px rgba(14, 165, 233, 0.15), 0 10px 10px rgba(14, 165, 233, 0.08);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #a855f7 100%);
+  --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e9d5ff 100%);
+  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
+  --gradient-bg: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  
+  /* Other */
   --max-width: 1200px;
-  --radius: 14px;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -59,12 +111,10 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  background-color: var(--body-color);
-  background-image: linear-gradient(180deg, var(--page-bg-top), var(--page-bg-bottom));
-  background-repeat: no-repeat;
+  background: var(--gradient-bg);
   background-attachment: fixed;
   color: var(--text-color);
-  transition: background-color 0.6s var(--transition-smooth), color 0.6s var(--transition-smooth);
+  transition: background 0.6s var(--transition-smooth), color 0.6s var(--transition-smooth);
   font-family: "LatoRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -77,23 +127,46 @@ body.loading {
 
 /* ===== Dark Mode Variables ===== */
 body.dark {
-  --body-color: #2c2c2d;
-  --nav-color: #242526;
-  --side-nav: #242526;
-  --text-color: #fff;
-  --accent: #6ea8ff;
-  --accent-2: #4a6ef7;
-  --card-bg: rgba(36, 37, 38, 0.6);
-  --card-border: rgba(255, 255, 255, 0.06);
-  --page-bg-top: #0f1112;
-  --page-bg-bottom: #18191a;
-  --main-color: var(--accent);
+  /* Dark Theme Colors - Better matched with light mode */
+  --body-color: #0a0f1e;
+  --nav-color: #111827;
+  --side-nav: #111827;
+  --text-color: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --muted: rgba(248, 250, 252, 0.6);
+  
+  /* Main Theme Colors for Dark - Matching light mode intensity */
+  --main-color: #0ea5e9;
+  --accent: #0ea5e9;
+  --accent-2: #38bdf8;
+  --accent-3: #0284c7;
+  --accent-purple: #a855f7;
+  --accent-purple-light: #c084fc;
+  
+  /* Background Colors for Dark */
+  --card-bg: rgba(17, 24, 39, 0.9);
+  --card-bg-hover: rgba(17, 24, 39, 1);
+  --card-border: rgba(14, 165, 233, 0.15);
+  --page-bg-top: #0a0f1e;
+  --page-bg-bottom: #111827;
+  
+  /* Shadows for Dark - Softer shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(14, 165, 233, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(14, 165, 233, 0.15);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.6), 0 4px 6px rgba(14, 165, 233, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.7), 0 10px 10px rgba(14, 165, 233, 0.25);
+  
+  /* Gradients for Dark - Same colors as light mode */
+  --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #a855f7 100%);
+  --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e9d5ff 100%);
+  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
+  --gradient-bg: linear-gradient(180deg, #0a0f1e 0%, #111827 100%);
 }
 
 /* ===== Selection ===== */
 ::selection {
-  background-color: var(--text-color);
-  color: var(--body-color);
+  background: var(--accent);
+  color: white;
   font-weight: 500;
 }
 
@@ -102,10 +175,15 @@ body.dark {
   position: fixed;
   top: 0;
   left: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  height: 4px;
+  background: var(--gradient-primary);
   z-index: 1001;
   transition: width 0.1s ease;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+}
+
+:global(body.dark) .scroll-progress {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
 }
 
 /* ===== Section Styles ===== */
@@ -115,7 +193,6 @@ body.dark {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: var(--body-color);
 }
 
 /* Grid background removed - using simple background */
@@ -135,23 +212,27 @@ body.dark {
 /* ===== Section Title ===== */
 .section-title {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
   color: var(--text-color);
   font-family: "LucyRose", Georgia, "Times New Roman", serif;
+  letter-spacing: 1px;
 }
 
 .accent-text {
-  color: var(--accent);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ===== Button Styles ===== */
 .btn {
-  padding: 12px 24px;
-  border-radius: 50px;
+  padding: 14px 28px;
+  border-radius: var(--radius);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -159,6 +240,7 @@ body.dark {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  letter-spacing: 0.3px;
 }
 
 .btn::before {
@@ -169,7 +251,7 @@ body.dark {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   transform: translate(-50%, -50%);
   transition: width 0.6s, height 0.6s;
 }
@@ -180,34 +262,36 @@ body.dark {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--gradient-primary);
   color: white;
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  background: var(--accent-2);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(64, 112, 244, 0.4);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn-primary:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: var(--text-color);
-  color: var(--body-color);
-  transform: translateY(-2px);
+  background: var(--accent);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
 /* ===== Toast Notifications ===== */
@@ -216,13 +300,14 @@ body.dark {
   bottom: 20px;
   right: 20px;
   padding: 1rem 1.5rem;
-  border-radius: 10px;
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   gap: 0.75rem;
   z-index: 10000;
   transform: translateX(120%);
   transition: transform 0.3s ease;
+  box-shadow: var(--shadow-lg);
 }
 
 .toast.show {
@@ -230,12 +315,12 @@ body.dark {
 }
 
 .toast.success {
-  background: #10b981;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
 }
 
 .toast.error {
-  background: #ef4444;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
   color: white;
 }
 

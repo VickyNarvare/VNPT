@@ -17,14 +17,15 @@
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  border-radius: 50px;
+  border-radius: 999px;
   margin-bottom: 2rem;
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
   animation: pulseBadge 2s ease-in-out infinite;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .availabilityBadge::before {
@@ -211,7 +212,7 @@
 
 .techHighlight {
   font-weight: 600;
-  background: linear-gradient(135deg, #4070f4 0%, #9370db 50%, #ff6b6b 100%);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -229,19 +230,19 @@
   align-items: center;
   gap: 0.5rem;
   padding: 14px 32px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: var(--gradient-primary);
   color: white;
-  border-radius: 30px;
+  border-radius: var(--radius);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  box-shadow: 0 4px 20px rgba(64, 112, 244, 0.35);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s var(--transition-smooth);
 }
 
 .btnPrimary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(64, 112, 244, 0.45);
+  box-shadow: var(--shadow-lg);
 }
 
 .arrow {
@@ -258,19 +259,21 @@
   align-items: center;
   padding: 14px 32px;
   background: transparent;
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
-  border-radius: 30px;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
 }
 
 .btnSecondary:hover {
-  background: var(--text-color);
-  color: var(--body-color);
+  background: var(--accent);
+  color: white;
   transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 /* ===== TECH MARQUEE ===== */
@@ -341,23 +344,30 @@
   align-items: center;
   gap: 10px;
   padding: 12px 20px;
-  background-color: #f5f5f5;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 999px;
   flex-shrink: 0;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
 }
 
 :global(body.dark) .techTag {
-  background-color: #2a2a2a;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
 }
 
 .techTag:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
+  background: var(--card-bg-hover);
+  border-color: var(--accent);
 }
 
 :global(body.dark) .techTag:hover {
-  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-md);
+  background: var(--card-bg-hover);
+  border-color: var(--accent);
 }
 
 .techIcon {
