@@ -1,0 +1,57 @@
+/* ===== SCROLL TO TOP BUTTON ===== */
+.scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 20px rgba(64, 112, 244, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.scrollToTop.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scrollToTop:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(64, 112, 244, 0.6);
+}
+
+.scrollToTop:active {
+  transform: translateY(-2px);
+}
+
+:global(body.dark) .scrollToTop {
+  background: linear-gradient(135deg, #6ea8ff 0%, #4a6ef7 100%);
+  box-shadow: 0 4px 20px rgba(110, 168, 255, 0.5);
+}
+
+:global(body.dark) .scrollToTop:hover {
+  box-shadow: 0 8px 30px rgba(110, 168, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .scrollToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}

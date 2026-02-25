@@ -14,6 +14,7 @@ import FAQ from './components/FAQ';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 import FloatingSocial from './components/FloatingSocial';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,7 @@ function App() {
         <Footer />
       </main>
       <FloatingSocial />
+      <ScrollToTop />
       <ToastContainer
         position="bottom-right"
         autoClose={3000}
