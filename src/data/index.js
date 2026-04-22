@@ -155,6 +155,25 @@ export const projectsData = [
     codeLink: "https://github.com/VickyNarvare/Weather-webiste",
     technologies: ["HTML", "CSS", "JavaScript", "Weather API"],
     layout: "left"
+  },
+  {
+    id: 8,
+    title: "YESH Enterprises - Modern Business Platform",
+    description: "A comprehensive business platform with modern dark-themed UI featuring pricing plans, testimonials, and service showcases. Built with cutting-edge technologies to deliver a seamless user experience.",
+    features: [
+      "Modern dark-themed responsive design",
+      "Interactive pricing plans with feature comparison",
+      "Testimonials and reviews section",
+      "Service showcase with detailed descriptions",
+      "Smooth animations and transitions",
+      "Professional gradient effects and modern UI components"
+    ],
+    image: "/images/project8.webp",
+    imageAlt: "YEH Enterprises Business Platform by Vicky Narvare",
+    demoLink: "https://example.com",
+    codeLink: "https://github.com/VickyNarvare/yeh-enterprises",
+    technologies: ["HTMl", "CSS3", "JavaScript", "Responsive Design"],
+    layout: "right"
   }
 ];
 
@@ -346,7 +365,7 @@ export const socialLinksData = [
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/mr_ankush_narvare_143',
+    url: 'https://www.instagram.com/webwithvicky?igsh=Z3A0Y3lva2I2YXVo',
     icon: 'bxl-instagram',
     tooltip: 'Instagram'
   },
