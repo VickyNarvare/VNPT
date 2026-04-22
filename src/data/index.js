@@ -170,8 +170,8 @@ export const projectsData = [
     ],
     image: "/images/project8.webp",
     imageAlt: "YEH Enterprises Business Platform by Vicky Narvare",
-    demoLink: "https://example.com",
-    codeLink: "https://github.com/VickyNarvare/yeh-enterprises",
+    demoLink: "https://yeshenterprises.vercel.app/",
+    codeLink: "https://github.com/VickyNarvare/YeshEnterprises",
     technologies: ["HTMl", "CSS3", "JavaScript", "Responsive Design"],
     layout: "right"
   }
