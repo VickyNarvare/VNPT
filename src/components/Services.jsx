@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { servicesData } from '../data';
 import { FiCode, FiLayout, FiGrid, FiBox, FiChevronDown, FiServer, FiEdit3, FiCloud } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import styles from '../styles/Services.module.css';
+import anim from '../styles/animations.module.css';
 
 const iconMap = {
   'bx-code-alt': FiCode,
@@ -48,17 +49,46 @@ const ServiceCard = ({ service }) => {
 };
 
 const Services = () => {
+  const [visibleCards, setVisibleCards] = useState(new Set());
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const i = Number(entry.target.dataset.index);
+            setVisibleCards((prev) => new Set([...prev, i]));
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+    );
+    cardRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="services" className={`section ${styles.servicesSection}`} aria-labelledby="services-heading">
       <div className="container">
-        <SectionHeader 
+        <SectionHeader
           title={<>What I <span>Offer</span></>}
           subtitle="Core development services I provide as a MERN Stack developer"
           bgText="SERVICES"
         />
         <div className={styles.servicesGrid} itemScope itemType="https://schema.org/ItemList">
           {servicesData.map((service, index) => (
-            <div key={service.id} itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+            <div
+              key={service.id}
+              ref={(el) => (cardRefs.current[index] = el)}
+              data-index={index}
+              className={`${anim.fadeUp} ${visibleCards.has(index) ? anim.visible : ''}`}
+              style={{ transitionDelay: `${(index % 3) * 0.12}s` }}
+              itemProp="itemListElement"
+              itemScope
+              itemType="https://schema.org/ListItem"
+            >
               <meta itemProp="position" content={String(index + 1)} />
               <ServiceCard service={service} />
             </div>

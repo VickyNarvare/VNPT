@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 import { HiX } from 'react-icons/hi';
@@ -19,6 +19,8 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('#home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [pillStyle, setPillStyle] = useState({});
+  const linkRefs = useRef({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,11 +45,23 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Move the sliding pill to the active link
+  useEffect(() => {
+    const activeEl = linkRefs.current[activeLink];
+    if (!activeEl) return;
+
+    // offsetLeft/offsetWidth are relative to the offsetParent (<ul>), no rect math needed
+    setPillStyle({
+      left: activeEl.offsetLeft,
+      width: activeEl.offsetWidth,
+    });
+  }, [activeLink]);
+
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
     document.body.style.overflow = '';
-    
+
     const sectionId = href.replace('#', '');
     const section = document.getElementById(sectionId);
     if (section) {
@@ -77,15 +91,24 @@ const Navbar = () => {
 
         <div className={`${styles.navMenu} ${styles.desktopMenu}`}>
           <ul className={styles.navList}>
+            {/* Sliding pill indicator */}
+            <span
+              className={styles.navPill}
+              style={pillStyle}
+              aria-hidden="true"
+            />
             {navLinks.map(link => (
-              <li key={link.href} className={styles.navItem}>
+              <li
+                key={link.href}
+                ref={(el) => (linkRefs.current[link.href] = el)}
+                className={styles.navItem}
+              >
                 <a
                   href={link.href}
                   className={`${styles.navLink} ${activeLink === link.href ? styles.active : ''}`}
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
                   <span className={styles.navText}>{link.label}</span>
-                  <span className={styles.navIndicator} />
                 </a>
               </li>
             ))}
@@ -93,14 +116,14 @@ const Navbar = () => {
         </div>
 
         <div className={styles.navControls}>
-         
+
 
           <button className={styles.themeToggle} aria-label="Toggle theme" onClick={toggleTheme}>
             <div className={styles.themeIcon}>
               {isDark ? <BsSunFill className={styles.sunIcon} /> : <BsMoonFill className={styles.moonIcon} />}
             </div>
           </button>
- <a href="#contact" className={styles.hireMeBtn} onClick={(e) => handleNavClick(e, '#contact')}>
+          <a href="#contact" className={styles.hireMeBtn} onClick={(e) => handleNavClick(e, '#contact')}>
             <FiSend className={styles.hireMeIcon} />
             <span>Hire Me</span>
           </a>

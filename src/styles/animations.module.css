@@ -1,0 +1,51 @@
+/* ===== SHARED SCROLL-IN ANIMATIONS ===== */
+
+/* Base hidden state */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fadeLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fadeRight {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fadeIn {
+  opacity: 0;
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Visible state — add this class to trigger */
+.visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Stagger delays */
+.delay1 { transition-delay: 0.1s; }
+.delay2 { transition-delay: 0.2s; }
+.delay3 { transition-delay: 0.3s; }
+.delay4 { transition-delay: 0.4s; }
+.delay5 { transition-delay: 0.5s; }
+.delay6 { transition-delay: 0.6s; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fadeUp, .fadeLeft, .fadeRight, .fadeIn {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

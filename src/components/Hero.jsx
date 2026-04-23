@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
 import { technologies, typingTexts } from '../data';
 import { FiGitBranch, FiGithub, FiLayout, FiSmartphone, FiPlay } from 'react-icons/fi';
@@ -10,6 +11,7 @@ import {
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import styles from '../styles/Hero.module.css';
+import anim from '../styles/animations.module.css';
 
 // MERN Stack icons with colors
 const mernStack = [
@@ -59,25 +61,34 @@ const TechTag = ({ tech }) => {
 
 const Hero = () => {
   const displayText = useTypingEffect(typingTexts);
+  const [mounted, setMounted] = useState(false);
+
+  // Trigger entrance after first paint
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 80);
+    return () => clearTimeout(t);
+  }, []);
+
+  const v = mounted ? anim.visible : '';
 
   return (
     <section id="home" className={`section ${styles.home}`}>
       <div className="container">
-        <div className={styles.availabilityBadge}>
+        <div className={`${anim.fadeUp} ${v} ${anim.delay1} ${styles.availabilityBadge}`}>
           <span className={styles.availabilityDot} />
           <span className={styles.availabilityText}>Available for Work</span>
         </div>
 
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
+          <h1 className={`${anim.fadeUp} ${v} ${anim.delay2} ${styles.heroTitle}`}>
             Vicky Narvare
           </h1>
-          <p className={styles.heroSubtitle}>
+          <p className={`${anim.fadeUp} ${v} ${anim.delay3} ${styles.heroSubtitle}`}>
             <span id="typing-text">{displayText}</span>
             <span className={styles.typingCursor}>|</span>
           </p>
           
-          <div className={styles.mernStack}>
+          <div className={`${anim.fadeUp} ${v} ${anim.delay3} ${styles.mernStack}`}>
             {mernStack.map((tech, index) => (
               <div key={index} className={styles.mernIcon} style={{ color: tech.color }}>
                 <tech.icon />
@@ -85,10 +96,10 @@ const Hero = () => {
             ))}
           </div>
 
-          <p className={styles.heroDescription}>
+          <p className={`${anim.fadeUp} ${v} ${anim.delay4} ${styles.heroDescription}`}>
             I build web applications with <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>Node.js</span>, and <span className={styles.techHighlight}>MongoDB</span>. Based in Indore, India, I've shipped 8 projects including e-commerce platforms and interactive web apps. Currently available for freelance work and full-time opportunities.
           </p>
-          <div className={styles.heroButtons}>
+          <div className={`${anim.fadeUp} ${v} ${anim.delay5} ${styles.heroButtons}`}>
             <a href="#works" className={styles.btnPrimary}>
               View My Work <span className={styles.arrow}>→</span>
             </a>
@@ -96,7 +107,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className={styles.techMarqueeContainer}>
+        <div className={`${anim.fadeIn} ${v} ${anim.delay6} ${styles.techMarqueeContainer}`}>
           <div className={styles.techMarqueeWrapper}>
             <div className={styles.techMarquee}>
               <div className={`${styles.techMarqueeTrack} ${styles.marqueeLeft}`}>
@@ -108,7 +119,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <a href="#about" className={styles.scrollDown} aria-label="Scroll down">
+        <a href="#about" className={`${anim.fadeIn} ${v} ${anim.delay6} ${styles.scrollDown}`} aria-label="Scroll down">
           <div className={styles.scrollMouse}>
             <BsMouse />
             <span className={styles.scrollDot}></span>

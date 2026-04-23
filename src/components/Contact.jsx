@@ -4,7 +4,9 @@ import { socialLinksData } from '../data';
 import { FiMail, FiPhone, FiMapPin, FiCopy, FiCheckCircle, FiGithub, FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import SectionHeader from './SectionHeader';
+import useInView from '../hooks/useInView';
 import styles from '../styles/Contact.module.css';
+import anim from '../styles/animations.module.css';
 
 const socialIconMap = {
   'bxl-github': FiGithub,
@@ -17,6 +19,7 @@ const socialIconMap = {
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [copied, setCopied] = useState(false);
+  const [sectionRef, sectionVisible] = useInView();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,14 +57,15 @@ const Contact = () => {
   const contactSocials = socialLinksData.filter(s => s.name !== 'Instagram');
 
   return (
-    <section id="contact" className="section" aria-labelledby="contact-heading">
+    <section id="contact" className="section" aria-labelledby="contact-heading" ref={sectionRef}>
       <div className="container">
-        <SectionHeader 
+        <SectionHeader
           title={<>Get In <span>Touch</span></>}
           bgText="CONTACT"
         />
 
-        <div className={styles.availabilityNotice}>
+        <div className={`${anim.fadeUp} ${sectionVisible ? anim.visible : ''}`}>
+          <div className={styles.availabilityNotice}>
           <div className={styles.availabilityNoticeIcon}>
             <FiCheckCircle />
           </div>
@@ -69,10 +73,11 @@ const Contact = () => {
             <h3>Available for Work</h3>
             <p>I'm currently available for freelance projects and full-time opportunities.</p>
           </div>
+          </div>
         </div>
 
         <div className={styles.contactContent}>
-          <div className={styles.contactInfo}>
+          <div className={`${anim.fadeLeft} ${sectionVisible ? anim.visible : ''} ${anim.delay2} ${styles.contactInfo}`}>
             <h3>Let's work together</h3>
             <p>I'm currently available for freelance projects and full-time opportunities. The fastest way to reach me is email or WhatsApp—I typically respond within 24 hours on weekdays.</p>
             <address className={styles.contactDetails} itemScope itemType="https://schema.org/Person">
@@ -119,7 +124,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className={styles.contactFormWrapper}>
+          <div className={`${anim.fadeRight} ${sectionVisible ? anim.visible : ''} ${anim.delay3} ${styles.contactFormWrapper}`}>
             <div className={styles.formNotice}>
               <p><strong>Note:</strong> Contact form is currently under development. Please use email or WhatsApp for fastest response.</p>
             </div>

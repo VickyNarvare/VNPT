@@ -309,7 +309,6 @@ export const skillsData = [
       { name: 'VS Code', dataSkill: 'vscode' },
       { name: 'Postman', dataSkill: 'postman' },
       { name: 'Vercel', dataSkill: 'vercel' },
-      { name: 'Netlify', dataSkill: 'netlify' }
     ]
   }
 ];
