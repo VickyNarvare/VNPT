@@ -43,7 +43,7 @@ const Footer = () => {
               </span>
             </div>
             <p className={styles.footerDescription}>
-              Frontend Developer creating beautiful and functional web experiences.
+              MERN Stack Developer building full-stack web applications.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ const Footer = () => {
             })}
           </div>
           <div className={styles.footerCopyright}>
-            <p>&copy; 2024 <strong>Vicky Narvare</strong> — Crafted with passion. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} <strong>Vicky Narvare</strong>. All rights reserved.</p>
           </div>
         </div>
       </div>

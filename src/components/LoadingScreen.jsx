@@ -115,7 +115,7 @@ const LoadingScreen = ({ onComplete }) => {
 
         <div className={styles.loadingUrl}>
           <div className={styles.dot}></div>
-          <span>vickynarware.vercel.app</span>
+          <span>vicky-narvare.vercel.app</span>
         </div>
 
         {/* Loading Text */}

@@ -4,9 +4,9 @@ import styles from '../styles/About.module.css';
 
 const stats = [
   { icon: FiZap, value: '2+', label: 'Years Experience' },
-  { icon: FiAward, value: '25+', label: 'Projects Done' },
+  { icon: FiAward, value: '8', label: 'Live Projects' },
   { icon: FiGitCommit, value: '200+', label: 'Git Commits' },
-  { icon: FiCode, value: '100K+', label: 'Lines of Code' },
+  { icon: FiCode, value: 'MERN', label: 'Stack Focus' },
 ];
 
 const About = () => {
@@ -43,15 +43,15 @@ const About = () => {
           {/* Right - Text */}
           <div className={styles.aboutText}>
             <meta itemProp="name" content="Vicky Narvare" />
-            <meta itemProp="jobTitle" content="MERN Stack Developer" />
+            <meta itemProp="jobTitle" content="Full-Stack Developer" />
             <p>
-              Welcome to my portfolio! I'm a passionate <span className={styles.highlight} itemProp="jobTitle">MERN Stack Developer</span> specializing in building full-stack web applications. I work with <span className={styles.highlight}>MongoDB, Express.js, React, and Node.js</span> to create scalable and efficient solutions.
+              I'm Vicky Narvare, a <span className={styles.highlight} itemProp="jobTitle">full-stack developer</span> based in <span className={styles.highlight} itemProp="address" itemScope itemType="https://schema.org/PostalAddress"><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>. I specialize in building web applications with the MERN stack—<span className={styles.highlight}>MongoDB</span> for data, <span className={styles.highlight}>Express and Node.js</span> for the backend, and <span className={styles.highlight}>React</span> for the frontend.
             </p>
             <p>
-              Based in <span className={styles.highlight} itemProp="address" itemScope itemType="https://schema.org/PostalAddress"><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>, I specialize in building end-to-end web applications from database design to user interface. I love creating RESTful APIs, implementing authentication systems, and building responsive frontends.
+              Over the past 2 years, I've built 8 projects that are live and being used. These include food ordering platforms with cart systems, coffee shop websites with admin dashboards, and interactive web apps with real-time features. I handle everything from database schema design to deployment on Vercel.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new backend technologies, learning about system design, or contributing to open source projects. Always eager to take on challenging full-stack projects!
+              I'm comfortable working independently on projects from start to finish. I write clean code, test thoroughly, and deploy confidently. I'm looking for opportunities where I can contribute to a team, solve real problems, and keep learning.
             </p>
           </div>
         </article>

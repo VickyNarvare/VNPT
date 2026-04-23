@@ -61,6 +61,39 @@
   margin-bottom: 2rem;
 }
 
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(14, 165, 233, 0.05);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+}
+
+.highlightItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.highlightLabel {
+  font-size: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.highlightValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 .buttons {
   display: flex;
   gap: 1rem;
@@ -111,6 +144,20 @@
     padding: 2rem;
   }
 
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .highlightLabel {
+    font-size: 0.7rem;
+  }
+
+  .highlightValue {
+    font-size: 1rem;
+  }
+
   .iconWrapper {
     width: 70px;
     height: 70px;
@@ -138,6 +185,21 @@
 @media (max-width: 480px) {
   .resumeCard {
     padding: 1.5rem;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlightLabel {
+    font-size: 0.65rem;
+  }
+
+  .highlightValue {
+    font-size: 0.95rem;
   }
 
   .iconWrapper {

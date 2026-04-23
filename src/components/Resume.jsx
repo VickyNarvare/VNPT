@@ -18,12 +18,19 @@ const Resume = () => {
     window.open(resumeUrl, '_blank');
   };
 
+  const resumeHighlights = [
+    { label: 'Experience', value: '2+ Years' },
+    { label: 'Projects', value: '8 Live' },
+    { label: 'Stack', value: 'MERN' },
+    { label: 'Availability', value: 'Immediate' }
+  ];
+
   return (
     <section id="resume" className="section" aria-labelledby="resume-heading">
       <div className="container">
         <SectionHeader 
           title={<>My <span>Resume</span></>}
-          subtitle="Download my resume to know more about my experience"
+          subtitle="Download my resume to see my full experience and skills"
           bgText="RESUME"
         />
         <div className={styles.resumeContainer}>
@@ -34,11 +41,22 @@ const Resume = () => {
             <h3 className={styles.title}>Vicky Narvare</h3>
             <p className={styles.subtitle}>MERN Stack Developer</p>
             <p className={styles.description}>
-              2+ years of experience in building full-stack web applications with MongoDB, Express.js, React, and Node.js.
+              2+ years of experience building full-stack web applications with MongoDB, Express.js, React, and Node.js. 
+              Specialized in creating responsive, user-friendly interfaces and scalable backend systems.
             </p>
+            
+            <div className={styles.highlights}>
+              {resumeHighlights.map((item, index) => (
+                <div key={index} className={styles.highlightItem}>
+                  <span className={styles.highlightLabel}>{item.label}</span>
+                  <span className={styles.highlightValue}>{item.value}</span>
+                </div>
+              ))}
+            </div>
+
             <div className={styles.buttons}>
               <button onClick={handleDownload} className={styles.btnPrimary}>
-                <FiDownload /> Download CV
+                <FiDownload /> Download Resume
               </button>
               <button onClick={handleView} className={styles.btnSecondary}>
                 <FiEye /> View Online

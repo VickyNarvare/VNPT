@@ -122,6 +122,59 @@
 .socialLinks {
   display: flex;
   gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quickActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s var(--transition-smooth);
+  box-shadow: var(--shadow-md);
+}
+
+.actionBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.contactFormWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formNotice {
+  padding: 2rem;
+  background: rgba(14, 165, 233, 0.05);
+  border: 2px dashed rgba(14, 165, 233, 0.2);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+:global(body.dark) .formNotice {
+  background: rgba(14, 165, 233, 0.08);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+.formNotice p {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .socialLink {
@@ -280,6 +333,23 @@
 
   .availabilityNoticeContent h3 {
     font-size: 1.2rem;
+  }
+
+  .quickActions {
+    flex-direction: column;
+  }
+
+  .actionBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contactFormWrapper {
+    padding: 0;
+  }
+
+  .formNotice {
+    padding: 1.5rem;
   }
 
   .contactContent {

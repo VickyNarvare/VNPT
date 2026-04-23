@@ -7,32 +7,32 @@ const faqData = [
   {
     id: 1,
     question: "What services do you offer?",
-    answer: "I offer Full Stack Development with MERN Stack (MongoDB, Express.js, React, Node.js), Frontend Development, Backend Development, API Development & Integration, UI/UX Design with Figma, and Deployment & Hosting services."
+    answer: "I offer Full Stack Web Development with MERN Stack (MongoDB, Express.js, React, Node.js), Frontend Development with React and Next.js, and Backend & API Development. I handle everything from database design to deployment."
   },
   {
     id: 2,
     question: "What technologies do you work with?",
-    answer: "I specialize in MongoDB, Express.js, React, Node.js (MERN Stack), Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, SCSS, GSAP animations, Git, and MySQL."
+    answer: "I specialize in the MERN Stack: MongoDB, Express.js, React, and Node.js. I also work with Next.js, Tailwind CSS, SCSS, GSAP for animations, Git for version control, and deploy on Vercel and Netlify."
   },
   {
     id: 3,
     question: "How can I hire you for my project?",
-    answer: "You can contact me via email at vickynarvare51@gmail.com, phone at +91 6267607029, or through the contact form on this website. I'm available for freelance projects and full-time opportunities."
+    answer: "You can reach me via email at vickynarvare51@gmail.com or call/WhatsApp at +91 6267607029. I typically respond within 24 hours. I'm available for freelance projects and full-time opportunities."
   },
   {
     id: 4,
     question: "What is your development process?",
-    answer: "My process includes: 1) Understanding requirements, 2) Planning & wireframing, 3) Design approval, 4) Development with regular updates, 5) Testing & bug fixes, 6) Deployment & handover with documentation."
+    answer: "I start by understanding your requirements, then create a plan and timeline. Development happens in stages with regular updates. I test thoroughly before deployment and provide documentation for handoff."
   },
   {
     id: 5,
-    question: "Do you provide ongoing support after project completion?",
-    answer: "Yes, I provide post-launch support including bug fixes, minor updates, and maintenance. I also offer extended support packages for long-term projects."
+    question: "How long does a project typically take?",
+    answer: "Timeline depends on project scope. A landing page takes 1-2 weeks, while a full-stack application with database and authentication may take 4-6 weeks. I'll provide a realistic estimate after discussing your needs."
   },
   {
     id: 6,
-    question: "How long does it take to complete a project?",
-    answer: "Project timeline depends on complexity. A simple website takes 1-2 weeks, while a full-stack web application may take 4-8 weeks. I'll provide a detailed timeline after understanding your requirements."
+    question: "Do you work on existing projects or only new ones?",
+    answer: "I work on both! I can build new projects from scratch or help improve, debug, or add features to existing codebases. I'm comfortable jumping into ongoing projects."
   }
 ];
 

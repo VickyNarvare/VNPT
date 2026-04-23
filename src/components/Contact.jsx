@@ -73,8 +73,8 @@ const Contact = () => {
 
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
-            <h3>Let's work together!</h3>
-            <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+            <h3>Let's work together</h3>
+            <p>I'm currently available for freelance projects and full-time opportunities. The fastest way to reach me is email or WhatsApp—I typically respond within 24 hours on weekdays.</p>
             <address className={styles.contactDetails} itemScope itemType="https://schema.org/Person">
               <meta itemProp="name" content="Vicky Narvare" />
               <div className={styles.contactItem}>
@@ -88,6 +88,10 @@ const Contact = () => {
               <div className={styles.contactItem}>
                 <FiPhone aria-hidden="true" />
                 <a href="tel:+916267607029" itemProp="telephone">+91 6267607029</a>
+              </div>
+              <div className={styles.contactItem}>
+                <FaWhatsapp aria-hidden="true" />
+                <a href="https://wa.me/916267607029" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </div>
               <div className={styles.contactItem} itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <FiMapPin aria-hidden="true" />
@@ -105,23 +109,21 @@ const Contact = () => {
                 );
               })}
             </div>
+            <div className={styles.quickActions}>
+              <a href="mailto:vickynarvare51@gmail.com" className={styles.actionBtn}>
+                <FiMail /> Email Me
+              </a>
+              <a href="https://wa.me/916267607029" className={styles.actionBtn} target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp /> WhatsApp
+              </a>
+            </div>
           </div>
 
-          <form className={styles.contactForm} onSubmit={handleSubmit}>
-            <div className={styles.formGroup}>
-              <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} required />
+          <div className={styles.contactFormWrapper}>
+            <div className={styles.formNotice}>
+              <p><strong>Note:</strong> Contact form is currently under development. Please use email or WhatsApp for fastest response.</p>
             </div>
-            <div className={styles.formGroup}>
-              <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} required />
-            </div>
-            <div className={styles.formGroup}>
-              <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={e => setFormData({...formData, subject: e.target.value})} required />
-            </div>
-            <div className={styles.formGroup}>
-              <textarea name="message" placeholder="Your Message" rows="5" value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} required />
-            </div>
-            <button type="submit" className={`btn btn-primary ${styles.contactBtn}`}>Send Message</button>
-          </form>
+          </div>
         </div>
       </div>
     </section>

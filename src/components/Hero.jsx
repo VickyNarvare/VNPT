@@ -2,8 +2,9 @@ import { useTypingEffect } from '../hooks/useTypingEffect';
 import { technologies, typingTexts } from '../data';
 import { FiGitBranch, FiGithub, FiLayout, FiSmartphone, FiPlay } from 'react-icons/fi';
 import { BsMouse } from 'react-icons/bs';
+import { FaCss3Alt } from 'react-icons/fa';
 import { 
-  SiHtml5, SiCss3, SiJavascript, SiSass, SiTailwindcss, SiReact, SiNextdotjs,
+  SiHtml5, SiJavascript, SiSass, SiTailwindcss, SiReact, SiNextdotjs,
   SiFigma, SiNpm, SiSublimetext, SiGooglechrome, SiCanva, SiMysql, SiGreensock,
   SiMongodb, SiExpress, SiNodedotjs
 } from 'react-icons/si';
@@ -20,7 +21,7 @@ const mernStack = [
 
 const iconMap = {
   'bxl-html5': SiHtml5,
-  'bxl-css3': SiCss3,
+  'bxl-css3': FaCss3Alt,
   'bxl-javascript': SiJavascript,
   'bxl-sass': SiSass,
   'bxl-tailwind-css': SiTailwindcss,
@@ -69,7 +70,7 @@ const Hero = () => {
 
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            HELLO, I'M &lt;<span className={styles.highlight}>VICKY</span>/&gt;
+            Vicky Narvare
           </h1>
           <p className={styles.heroSubtitle}>
             <span id="typing-text">{displayText}</span>
@@ -85,14 +86,13 @@ const Hero = () => {
           </div>
 
           <p className={styles.heroDescription}>
-            Expert MERN Stack Developer from Indore, India. I craft beautiful, responsive, and
-            performant full-stack web applications using <span className={styles.techHighlight}>MongoDB</span>, <span className={styles.techHighlight}>Express</span>, <span className={styles.techHighlight}>React</span>, and <span className={styles.techHighlight}>Node.js</span>.
+            I build web applications with <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>Node.js</span>, and <span className={styles.techHighlight}>MongoDB</span>. Based in Indore, India, I've shipped 8 projects including e-commerce platforms and interactive web apps. Currently available for freelance work and full-time opportunities.
           </p>
           <div className={styles.heroButtons}>
-            <a href="#contact" className={styles.btnPrimary}>
-              Hire Me <span className={styles.arrow}>→</span>
+            <a href="#works" className={styles.btnPrimary}>
+              View My Work <span className={styles.arrow}>→</span>
             </a>
-            <a href="#works" className={styles.btnSecondary}>View My Projects</a>
+            <a href="#contact" className={styles.btnSecondary}>Get In Touch</a>
           </div>
         </div>
 
@@ -102,15 +102,6 @@ const Hero = () => {
               <div className={`${styles.techMarqueeTrack} ${styles.marqueeLeft}`}>
                 {tripledTechnologies.map((tech, index) => (
                   <TechTag key={`left-${index}`} tech={tech} />
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className={styles.techMarqueeWrapper}>
-            <div className={styles.techMarquee}>
-              <div className={`${styles.techMarqueeTrack} ${styles.marqueeRight}`}>
-                {tripledTechnologies.map((tech, index) => (
-                  <TechTag key={`right-${index}`} tech={tech} />
                 ))}
               </div>
             </div>

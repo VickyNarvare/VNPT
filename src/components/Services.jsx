@@ -52,8 +52,8 @@ const Services = () => {
     <section id="services" className={`section ${styles.servicesSection}`} aria-labelledby="services-heading">
       <div className="container">
         <SectionHeader 
-          title={<>My <span>Services</span></>}
-          subtitle="As a dedicated MERN Stack Developer from Indore, I specialize in building full-stack web applications using MongoDB, Express.js, React, and Node.js."
+          title={<>What I <span>Offer</span></>}
+          subtitle="Core development services I provide as a MERN Stack developer"
           bgText="SERVICES"
         />
         <div className={styles.servicesGrid} itemScope itemType="https://schema.org/ItemList">
