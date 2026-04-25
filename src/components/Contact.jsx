@@ -114,14 +114,6 @@ const Contact = () => {
                 );
               })}
             </div>
-            <div className={styles.quickActions}>
-              <a href="mailto:vickynarvare51@gmail.com" className={styles.actionBtn}>
-                <FiMail /> Email Me
-              </a>
-              <a href="https://wa.me/916267607029" className={styles.actionBtn} target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp /> WhatsApp
-              </a>
-            </div>
           </div>
 
           <div className={`${anim.fadeRight} ${sectionVisible ? anim.visible : ''} ${anim.delay3} ${styles.contactFormWrapper}`}>

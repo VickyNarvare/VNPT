@@ -234,7 +234,7 @@ const Projects = () => {
       <div className="container">
         <SectionHeader
           title={<>Featured <span>Projects</span></>}
-          subtitle="Click on any project to see details"
+          subtitle="A selection of live projects showcasing full-stack development and frontend work"
           bgText="PROJECTS"
         />
 
