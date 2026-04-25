@@ -83,8 +83,8 @@ const Navbar = () => {
           <a href="#home" className={styles.logoLink} onClick={(e) => handleNavClick(e, '#home')}>
             <span className={styles.logoText}>
               <span className={styles.logoBracket}>&lt;</span>
-              <span className={styles.logoName}>ViCKY</span>
-              <span className={styles.logoBracket}>/&gt;</span>
+              <span className={styles.logoName}>VN</span>
+              <span className={styles.logoBracket}>&gt;</span>
             </span>
           </a>
         </div>
@@ -152,8 +152,8 @@ const Navbar = () => {
             <div className={styles.mobileLogo}>
               <span className={styles.logoText}>
                 <span className={styles.logoBracket}>&lt;</span>
-                <span className={styles.logoName}>ViCKY</span>
-                <span className={styles.logoBracket}>/&gt;</span>
+                <span className={styles.logoName}>VN</span>
+                <span className={styles.logoBracket}>&gt;</span>
               </span>
             </div>
             <button className={styles.mobileMenuClose} onClick={() => { setMobileMenuOpen(false); document.body.style.overflow = ''; }}>

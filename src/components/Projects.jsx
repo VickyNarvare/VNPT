@@ -42,7 +42,7 @@ const ProjectCard = ({ project, onClick }) => {
         </div>
 
         <figcaption className={styles.cardOverlay}>
-          <h3 className={styles.cardTitle} itemProp="name">{project.title}</h3>
+          <p className={styles.cardSubtitle}>{project.subtitle}</p>
           <div className={styles.cardTech}>
             {project.technologies.slice(0, 3).map(tech => (
               <span key={tech} className={styles.techBadge} itemProp="keywords">{tech}</span>
@@ -51,7 +51,7 @@ const ProjectCard = ({ project, onClick }) => {
               <span className={styles.techBadge}>+{project.technologies.length - 3}</span>
             )}
           </div>
-          <span className={styles.viewMore}>Click for details</span>
+          <span className={styles.viewMore}>View Project →</span>
         </figcaption>
       </figure>
       <meta itemProp="description" content={project.description} />

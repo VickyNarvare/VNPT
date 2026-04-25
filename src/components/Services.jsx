@@ -25,7 +25,7 @@ const ServiceCard = ({ service }) => {
         <div className={styles.serviceIcon} aria-hidden="true">
           <IconComponent />
         </div>
-        <button className={styles.serviceToggle} aria-label="Toggle service details" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
+        <button className={styles.serviceToggle} aria-label="Expand or collapse" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
           <FiChevronDown className={styles.serviceArrow} />
         </button>
       </div>
@@ -40,9 +40,9 @@ const ServiceCard = ({ service }) => {
         </ul>
       </div>
       <div className={styles.serviceFooter}>
-        <button className={styles.serviceLinkToggle} onClick={() => setExpanded(false)}>Collapse</button>
-        <button className={styles.serviceLinkExpand} onClick={() => setExpanded(true)}>Expand Details</button>
-        <a href="#contact" className={styles.serviceBtn}>Request Quote</a>
+        <button className={styles.serviceLinkToggle} onClick={() => setExpanded(false)}>Show Less</button>
+        <button className={styles.serviceLinkExpand} onClick={() => setExpanded(true)}>Learn More</button>
+        <a href="#contact" className={styles.serviceBtn}>Get Started</a>
       </div>
     </article>
   );

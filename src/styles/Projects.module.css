@@ -244,6 +244,20 @@
   transform: translateY(0);
 }
 
+.cardSubtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .cardSubtitle {
+  transform: translateY(0);
+}
+
 .cardTech {
   display: flex;
   flex-wrap: wrap;

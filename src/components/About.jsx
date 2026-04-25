@@ -14,23 +14,30 @@ const stats = [
 
 // Animated number counter
 const Counter = ({ target, suffix, active }) => {
-  const [count, setCount] = useState(0);
   const isString = typeof target === 'string';
+  const [count, setCount] = useState(isString ? target : 0);
 
   useEffect(() => {
-    if (!active || isString) return;
+    if (!active || isString) {
+      if (isString) setCount(target);
+      return;
+    }
     let start = 0;
     const duration = 1200;
     const step = Math.ceil(target / (duration / 16));
     const timer = setInterval(() => {
       start += step;
-      if (start >= target) { setCount(target); clearInterval(timer); }
-      else setCount(start);
+      if (start >= target) { 
+        setCount(target); 
+        clearInterval(timer); 
+      } else {
+        setCount(start);
+      }
     }, 16);
     return () => clearInterval(timer);
   }, [active, target, isString]);
 
-  return <span>{isString ? target : count}{suffix}</span>;
+  return <span>{count}{suffix}</span>;
 };
 
 const About = () => {
