@@ -9,7 +9,7 @@ export const technologies = [
   { name: 'Git', color: '#F05032', icon: 'bxl-git' },
   { name: 'REST API', color: '#FF6B6B', icon: 'bx-code-block' },
   { name: 'MySQL', color: '#4479A1', icon: 'bx-data' },
-  { name: 'GSAP', color: '#D9B310', icon: 'bx-movie-play' }
+  { name: 'Next.js', color: '#000000', icon: 'bx-code-alt' }
 ];
 
 // Projects Data

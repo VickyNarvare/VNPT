@@ -34,5 +34,5 @@ export const useTypingEffect = (texts, typingSpeed = 100, deletingSpeed = 50, pa
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex, texts, typingSpeed, deletingSpeed, pauseTime]);
 
-  return displayText;
+  return displayText + '|';
 };

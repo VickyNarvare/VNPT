@@ -85,7 +85,6 @@ const Hero = () => {
           </h1>
           <p className={`${anim.fadeUp} ${v} ${anim.delay3} ${styles.heroSubtitle}`}>
             <span id="typing-text">{displayText}</span>
-            <span className={styles.typingCursor}>|</span>
           </p>
           
           <div className={`${anim.fadeUp} ${v} ${anim.delay3} ${styles.mernStack}`}>

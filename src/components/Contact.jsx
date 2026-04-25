@@ -94,10 +94,6 @@ const Contact = () => {
                 <FiPhone aria-hidden="true" />
                 <a href="tel:+916267607029" itemProp="telephone">+91 6267607029</a>
               </div>
-              <div className={styles.contactItem}>
-                <FaWhatsapp aria-hidden="true" />
-                <a href="https://wa.me/916267607029" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              </div>
               <div className={styles.contactItem} itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <FiMapPin aria-hidden="true" />
                 <span><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>

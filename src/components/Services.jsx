@@ -40,9 +40,9 @@ const ServiceCard = ({ service }) => {
         </ul>
       </div>
       <div className={styles.serviceFooter}>
-        <button className={styles.serviceLinkToggle} onClick={() => setExpanded(false)}>Show less</button>
-        <button className={styles.serviceLinkExpand} onClick={() => setExpanded(true)}>View details</button>
-        <a href="#contact" className={styles.serviceBtn}>Get a Quote</a>
+        <button className={styles.serviceLinkToggle} onClick={() => setExpanded(false)}>Collapse</button>
+        <button className={styles.serviceLinkExpand} onClick={() => setExpanded(true)}>Expand Details</button>
+        <a href="#contact" className={styles.serviceBtn}>Request Quote</a>
       </div>
     </article>
   );

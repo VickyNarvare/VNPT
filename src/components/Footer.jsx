@@ -39,7 +39,7 @@ const Footer = () => {
               <span className={styles.logoText}>
                 <span className={styles.logoBracket}>&lt;</span>
                 <span className={styles.logoName}>ViCKY</span>
-                <span className={styles.logoBracket}>/&gt;</span>
+                <span className={styles.logoBracket}>&gt;</span>
               </span>
             </div>
             <p className={styles.footerDescription}>
