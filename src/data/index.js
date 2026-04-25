@@ -17,8 +17,8 @@ export const projectsData = [
   {
     id: 1,
     title: "Foodie Delight",
-    subtitle: "Food ordering platform with cart, checkout, and order tracking",
-    description: "Built to practice full e-commerce flow including state management, form validation, and multi-step checkout. Handles menu browsing, cart operations, promo codes, and order tracking with persistent state.",
+    subtitle: "Food ordering app with cart and checkout system",
+    description: "A full-featured food ordering platform with menu browsing, shopping cart, promo code validation, and order tracking. Built to practice e-commerce flows including state management, form validation, and multi-step checkout with persistent state.",
     problem: "Practice building a complete e-commerce flow with complex state management",
     solution: "Implemented cart system with Context API, multi-step checkout, and order tracking",
     features: [
@@ -34,15 +34,15 @@ export const projectsData = [
     imageAlt: "Foodie Delight app screenshot",
     demoLink: "https://foodwebsite-vicky.vercel.app",
     codeLink: "https://github.com/VickyNarvare/Advance-Food-Ordering-App",
-    technologies: ["React 19", "Tailwind CSS", "Context API", "React Router", "LocalStorage"],
+    technologies: ["React", "Tailwind CSS", "Context API", "React Router", "LocalStorage"],
     role: "Solo Developer",
     layout: "left"
   },
   {
     id: 2,
     title: "Coffee Cup",
-    subtitle: "Coffee shop e-commerce with admin dashboard",
-    description: "Full-featured coffee shop website with ordering system and admin panel. Built with React 19 and Tailwind CSS v4, featuring cart management and order processing.",
+    subtitle: "Coffee shop website with admin dashboard",
+    description: "A complete coffee shop e-commerce site with customer ordering flow and admin panel for order management. Features product catalog, shopping cart, and order processing.",
     problem: "Create a complete ordering system with both customer and admin interfaces",
     solution: "Built dual-interface system with customer ordering flow and admin dashboard for order management",
     features: [
@@ -58,15 +58,15 @@ export const projectsData = [
     imageAlt: "Coffee Cup website screenshot",
     demoLink: "https://coffeeap.vercel.app/",
     codeLink: "https://github.com/VickyNarvare/coffeeapp",
-    technologies: ["React 19", "Tailwind CSS", "Context API", "Vite"],
+    technologies: ["React", "Tailwind CSS", "Context API", "Vite"],
     role: "Solo Developer",
     layout: "right"
   },
   {
     id: 3,
     title: "ElectraX",
-    subtitle: "Interactive website with advanced GSAP animations",
-    description: "Futuristic website showcasing advanced animation techniques with GSAP. Features scroll-triggered animations, parallax effects, and custom cursor interactions.",
+    subtitle: "Interactive landing page with GSAP animations",
+    description: "A modern, animated website showcasing advanced GSAP techniques including scroll-triggered animations, parallax effects, and custom cursor interactions.",
     problem: "Learn and implement advanced animation techniques for engaging user experiences",
     solution: "Used GSAP ScrollTrigger for scroll-based animations and created custom cursor interactions",
     features: [
@@ -89,8 +89,8 @@ export const projectsData = [
   {
     id: 4,
     title: "FitnessClub",
-    subtitle: "Modern gym website with pricing plans and trainer showcase",
-    description: "A responsive gym website featuring smooth animations, pricing comparison, and trainer profiles. Built to practice modern CSS layouts and JavaScript animations.",
+    subtitle: "Gym website with pricing and trainer profiles",
+    description: "A responsive gym business website featuring pricing plans, trainer showcase, and smooth scroll animations. Built with modern CSS layouts and vanilla JavaScript.",
     problem: "Create a professional business website with multiple content sections and smooth user experience",
     solution: "Implemented CSS Grid/Flexbox layouts, animated stats counter, and mobile-responsive navigation",
     features: [
@@ -113,8 +113,8 @@ export const projectsData = [
   {
     id: 5,
     title: "JARVIS AI",
-    subtitle: "Voice-controlled AI interface with Web Speech API",
-    description: "Interactive AI demo platform with voice recognition and futuristic UI. Built to explore browser speech APIs and create engaging voice-controlled experiences.",
+    subtitle: "Voice-controlled interface using Web Speech API",
+    description: "An interactive AI demo with voice command recognition and real-time feedback. Features a futuristic dark UI with custom audio visualizations.",
     problem: "Learn Web Speech API and create an interactive voice-controlled interface",
     solution: "Implemented voice command recognition with real-time feedback and custom audio visualizations",
     features: [
@@ -137,8 +137,8 @@ export const projectsData = [
   {
     id: 6,
     title: "YESH Enterprises",
-    subtitle: "Business platform with pricing comparison and testimonials",
-    description: "Modern business website with dark theme, featuring interactive pricing plans and testimonials. Built to practice component-based design and professional UI patterns.",
+    subtitle: "Business website with pricing and testimonials",
+    description: "A professional business platform with dark theme design, interactive pricing comparison, testimonial section, and service showcase.",
     problem: "Create a professional business platform with pricing comparison and social proof elements",
     solution: "Designed dark-themed UI with interactive pricing cards, testimonial carousel, and service showcase",
     features: [
@@ -161,8 +161,8 @@ export const projectsData = [
   {
     id: 7,
     title: "Kalika Construction",
-    subtitle: "Construction company website with project portfolio",
-    description: "Professional business website for a construction company, featuring service listings and project galleries. Built to practice creating client-focused business websites.",
+    subtitle: "Construction company portfolio site",
+    description: "A professional business website for a construction company featuring service descriptions, project galleries, and contact form.",
     problem: "Design a professional website for a construction business with portfolio showcase",
     solution: "Created clean, business-focused design with service descriptions, project galleries, and contact form",
     features: [
@@ -185,8 +185,8 @@ export const projectsData = [
   {
     id: 8,
     title: "Weather Application",
-    subtitle: "Real-time weather app with 5-day forecast",
-    description: "Weather application providing real-time weather data for any location worldwide. Built to practice API integration and handling asynchronous data.",
+    subtitle: "Real-time weather app with forecast",
+    description: "A weather application that fetches real-time data for any location using a third-party API. Displays current conditions and 5-day forecast with location search.",
     problem: "Learn to work with external APIs and handle real-time data fetching",
     solution: "Integrated Weather API with location search, current conditions, and 5-day forecast display",
     features: [
@@ -214,7 +214,7 @@ export const servicesData = [
     id: 1,
     icon: 'bx-code-alt',
     title: 'MERN Stack Applications',
-    description: 'Complete web applications with React frontend, Node.js backend, and MongoDB database. From MVP to deployment, I handle the full development cycle.',
+    description: 'End-to-end web applications built with MongoDB, Express.js, React, and Node.js. I handle everything from initial setup to production deployment.',
     services: [
       'Full-stack MERN development (MongoDB, Express, React, Node.js)',
       'RESTful API design & implementation',
@@ -228,7 +228,7 @@ export const servicesData = [
     id: 2,
     icon: 'bx-palette',
     title: 'Frontend Development',
-    description: 'Modern, responsive user interfaces with React and Next.js. Focus on performance, accessibility, and smooth user experiences.',
+    description: 'Modern, responsive user interfaces built with React and Next.js. I focus on clean code, smooth interactions, and mobile-first design.',
     services: [
       'React & Next.js applications',
       'Mobile-first responsive design',
@@ -242,7 +242,7 @@ export const servicesData = [
     id: 3,
     icon: 'bx-server',
     title: 'Backend & API Development',
-    description: 'Server-side applications and RESTful APIs with Node.js and Express. Database integration, authentication, and third-party API connections.',
+    description: 'Scalable server-side applications and RESTful APIs using Node.js and Express. I build secure backends with proper authentication and database integration.',
     services: [
       'Node.js & Express.js server development',
       'MongoDB & MySQL database integration',
@@ -360,6 +360,6 @@ export const navLinks = [
 // Typing texts for hero section
 export const typingTexts = [
   'MERN Stack Developer',
-  '8 Live Projects • 2+ Years Experience',
-  'React • Node.js • MongoDB • Express'
+  '2+ Years Experience • 8 Live Projects',
+  'Building Full-Stack Web Applications'
 ];

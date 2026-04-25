@@ -43,7 +43,7 @@ const Footer = () => {
               </span>
             </div>
             <p className={styles.footerDescription}>
-              MERN Stack Developer building full-stack web applications.
+              Full-stack developer specializing in MERN stack web applications.
             </p>
           </div>
 

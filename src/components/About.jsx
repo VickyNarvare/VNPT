@@ -72,13 +72,13 @@ const About = () => {
             <meta itemProp="name" content="Vicky Narvare" />
             <meta itemProp="jobTitle" content="Full-Stack Developer" />
             <p>
-              I'm Vicky Narvare, a <span className={styles.highlight} itemProp="jobTitle">full-stack developer</span> based in <span className={styles.highlight} itemProp="address" itemScope itemType="https://schema.org/PostalAddress"><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>. I specialize in building web applications with the MERN stack—<span className={styles.highlight}>MongoDB</span> for data, <span className={styles.highlight}>Express and Node.js</span> for the backend, and <span className={styles.highlight}>React</span> for the frontend.
+              I'm Vicky Narvare, a <span className={styles.highlight} itemProp="jobTitle">MERN Stack Developer</span> based in <span className={styles.highlight} itemProp="address" itemScope itemType="https://schema.org/PostalAddress"><span itemProp="addressLocality">Indore</span>, <span itemProp="addressCountry">India</span></span>. I specialize in building full-stack web applications using <span className={styles.highlight}>MongoDB</span>, <span className={styles.highlight}>Express.js</span>, <span className={styles.highlight}>React</span>, and <span className={styles.highlight}>Node.js</span>.
             </p>
             <p>
-              Over the past 2 years, I've built 8 projects that are live and being used. These include food ordering platforms with cart systems, coffee shop websites with admin dashboards, and interactive web apps with real-time features. I handle everything from database schema design to deployment on Vercel.
+              Over the past 2+ years, I've delivered 8 live projects including e-commerce platforms with shopping carts and checkout flows, business websites with admin dashboards, and interactive web applications with animations and real-time features. I handle the complete development cycle—from database design and API development to responsive UI implementation and deployment.
             </p>
             <p>
-              I'm comfortable working independently on projects from start to finish. I write clean code, test thoroughly, and deploy confidently. I'm looking for opportunities where I can contribute to a team, solve real problems, and keep learning.
+              I write clean, maintainable code and work comfortably both independently and as part of a team. I'm currently seeking MERN Stack or React Developer roles—open to both freelance projects and full-time opportunities where I can contribute, solve meaningful problems, and continue growing as a developer.
             </p>
           </div>
         </article>

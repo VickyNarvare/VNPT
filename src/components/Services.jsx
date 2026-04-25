@@ -40,9 +40,9 @@ const ServiceCard = ({ service }) => {
         </ul>
       </div>
       <div className={styles.serviceFooter}>
-        <button className={styles.serviceLinkToggle} onClick={() => setExpanded(false)}>Click to minimize</button>
-        <button className={styles.serviceLinkExpand} onClick={() => setExpanded(true)}>Click for details</button>
-        <a href="#contact" className={styles.serviceBtn}>Custom Quote</a>
+        <button className={styles.serviceLinkToggle} onClick={() => setExpanded(false)}>Show less</button>
+        <button className={styles.serviceLinkExpand} onClick={() => setExpanded(true)}>View details</button>
+        <a href="#contact" className={styles.serviceBtn}>Get a Quote</a>
       </div>
     </article>
   );
@@ -74,7 +74,7 @@ const Services = () => {
       <div className="container">
         <SectionHeader
           title={<>What I <span>Offer</span></>}
-          subtitle="Core development services I provide as a MERN Stack developer"
+          subtitle="Development services I provide for clients and businesses"
           bgText="SERVICES"
         />
         <div className={styles.servicesGrid} itemScope itemType="https://schema.org/ItemList">

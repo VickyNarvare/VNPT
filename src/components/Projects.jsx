@@ -51,7 +51,7 @@ const ProjectCard = ({ project, onClick }) => {
               <span className={styles.techBadge}>+{project.technologies.length - 3}</span>
             )}
           </div>
-          <span className={styles.viewMore}>Click to view details</span>
+          <span className={styles.viewMore}>View details</span>
         </figcaption>
       </figure>
       <meta itemProp="description" content={project.description} />

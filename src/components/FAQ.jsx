@@ -7,32 +7,32 @@ const faqData = [
   {
     id: 1,
     question: "What services do you offer?",
-    answer: "I offer Full Stack Web Development with MERN Stack (MongoDB, Express.js, React, Node.js), Frontend Development with React and Next.js, and Backend & API Development. I handle everything from database design to deployment."
+    answer: "I offer full-stack web development with the MERN stack (MongoDB, Express.js, React, Node.js), frontend development with React and Next.js, and backend API development. I handle the complete development cycle from database design to deployment."
   },
   {
     id: 2,
     question: "What technologies do you work with?",
-    answer: "I specialize in the MERN Stack: MongoDB, Express.js, React, and Node.js. I also work with Next.js, Tailwind CSS, SCSS, GSAP for animations, Git for version control, and deploy on Vercel and Netlify."
+    answer: "I specialize in the MERN stack: MongoDB, Express.js, React, and Node.js. I also work with Next.js, JavaScript, Tailwind CSS, SCSS, Bootstrap, GSAP, MySQL, REST APIs, JWT authentication, Git, and deploy on Vercel and Netlify."
   },
   {
     id: 3,
     question: "How can I hire you for my project?",
-    answer: "You can reach me via email at vickynarvare51@gmail.com or call/WhatsApp at +91 6267607029. I typically respond within 24 hours. I'm available for freelance projects and full-time opportunities."
+    answer: "You can reach me via email at vickynarvare51@gmail.com or WhatsApp at +91 6267607029. I typically respond within 24 hours on weekdays. I'm available for both freelance projects and full-time positions."
   },
   {
     id: 4,
     question: "What is your development process?",
-    answer: "I start by understanding your requirements, then create a plan and timeline. Development happens in stages with regular updates. I test thoroughly before deployment and provide documentation for handoff."
+    answer: "I start by understanding your requirements and goals, then create a development plan with clear milestones. I provide regular progress updates, test thoroughly, and deliver clean, documented code ready for deployment."
   },
   {
     id: 5,
     question: "How long does a project typically take?",
-    answer: "Timeline depends on project scope. A landing page takes 1-2 weeks, while a full-stack application with database and authentication may take 4-6 weeks. I'll provide a realistic estimate after discussing your needs."
+    answer: "Timelines vary by scope. A landing page typically takes 1-2 weeks, while a full MERN stack application with authentication and database integration may take 4-6 weeks. I'll provide a realistic timeline after reviewing your specific requirements."
   },
   {
     id: 6,
     question: "Do you work on existing projects or only new ones?",
-    answer: "I work on both! I can build new projects from scratch or help improve, debug, or add features to existing codebases. I'm comfortable jumping into ongoing projects."
+    answer: "Both. I can build new projects from scratch or work on existing codebases—whether that's adding features, fixing bugs, or improving performance. I'm comfortable working with established projects and teams."
   }
 ];
 

@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
 
           <p className={`${anim.fadeUp} ${v} ${anim.delay4} ${styles.heroDescription}`}>
-            I build web applications with <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>Node.js</span>, and <span className={styles.techHighlight}>MongoDB</span>. Based in Indore, India, I've shipped 8 projects including e-commerce platforms and interactive web apps. Currently available for freelance work and full-time opportunities.
+            I build full-stack web applications using the <span className={styles.techHighlight}>MERN stack</span>—from e-commerce platforms and admin dashboards to interactive landing pages. With 2+ years of experience and 8 live projects deployed, I deliver clean code and scalable solutions. Based in Indore, India, and available for freelance projects and full-time roles.
           </p>
           <div className={`${anim.fadeUp} ${v} ${anim.delay5} ${styles.heroButtons}`}>
             <a href="#works" className={styles.btnPrimary}>

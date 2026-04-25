@@ -30,7 +30,7 @@ const Resume = () => {
       <div className="container">
         <SectionHeader 
           title={<>My <span>Resume</span></>}
-          subtitle="Download my resume to see my full experience and skills"
+          subtitle="Download my resume for complete details on experience and skills"
           bgText="RESUME"
         />
         <div className={styles.resumeContainer}>
@@ -41,8 +41,7 @@ const Resume = () => {
             <h3 className={styles.title}>Vicky Narvare</h3>
             <p className={styles.subtitle}>MERN Stack Developer</p>
             <p className={styles.description}>
-              2+ years of experience building full-stack web applications with MongoDB, Express.js, React, and Node.js. 
-              Specialized in creating responsive, user-friendly interfaces and scalable backend systems.
+              MERN Stack Developer with 2+ years of experience building full-stack web applications. Delivered 8 live projects including e-commerce platforms, admin dashboards, and interactive web apps. Experienced in authentication systems, RESTful APIs, and production deployments. Seeking MERN/React Developer roles—open to freelance and full-time opportunities.
             </p>
             
             <div className={styles.highlights}>

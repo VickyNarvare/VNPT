@@ -78,8 +78,8 @@ const Contact = () => {
 
         <div className={styles.contactContent}>
           <div className={`${anim.fadeLeft} ${sectionVisible ? anim.visible : ''} ${anim.delay2} ${styles.contactInfo}`}>
-            <h3>Let's work together</h3>
-            <p>I'm currently available for freelance projects and full-time opportunities. The fastest way to reach me is email or WhatsApp—I typically respond within 24 hours on weekdays.</p>
+            <h3>Let's Work Together</h3>
+            <p>I'm currently available for freelance projects and full-time opportunities. The fastest way to reach me is via email or WhatsApp—I typically respond within 24 hours on weekdays.</p>
             <address className={styles.contactDetails} itemScope itemType="https://schema.org/Person">
               <meta itemProp="name" content="Vicky Narvare" />
               <div className={styles.contactItem}>
@@ -126,7 +126,7 @@ const Contact = () => {
 
           <div className={`${anim.fadeRight} ${sectionVisible ? anim.visible : ''} ${anim.delay3} ${styles.contactFormWrapper}`}>
             <div className={styles.formNotice}>
-              <p><strong>Note:</strong> Contact form is currently under development. Please use email or WhatsApp for fastest response.</p>
+              <p><strong>Note:</strong> The contact form is currently under development. Please use email or WhatsApp to reach me directly.</p>
             </div>
           </div>
         </div>
