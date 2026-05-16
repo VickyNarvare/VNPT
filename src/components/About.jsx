@@ -6,10 +6,10 @@ import styles from '../styles/About.module.css';
 import anim from '../styles/animations.module.css';
 
 const stats = [
-  { icon: FiZap,       value: 2,      suffix: '+', label: 'Years Experience' },
-  { icon: FiAward,     value: 8,      suffix: '',  label: 'Live Projects' },
-  { icon: FiGitCommit, value: 200,    suffix: '+', label: 'Git Commits' },
-  { icon: FiCode,      value: 'MERN', suffix: '',  label: 'Stack Focus' },
+  { icon: FiZap, value: 2, suffix: '+', label: 'Years Experience' },
+  { icon: FiAward, value: 8, suffix: '', label: 'Live Projects' },
+  { icon: FiGitCommit, value: 200, suffix: '+', label: 'Git Commits' },
+  { icon: FiCode, value: 'MERN', suffix: '', label: 'Stack Focus' },
 ];
 
 // Animated number counter
@@ -27,9 +27,9 @@ const Counter = ({ target, suffix, active }) => {
     const step = Math.ceil(target / (duration / 16));
     const timer = setInterval(() => {
       start += step;
-      if (start >= target) { 
-        setCount(target); 
-        clearInterval(timer); 
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
       } else {
         setCount(start);
       }
@@ -58,7 +58,7 @@ const About = () => {
               <div className={styles.frameBg}></div>
               <div className={styles.imageContainer}>
                 <img
-                  src="/images/VickyNarvare.webp"
+                  src="/images/VickyNarvare.png"
                   alt="Vicky Narvare - Professional MERN Stack Developer from Indore, India"
                   title="Vicky Narvare - MERN Stack Developer"
                   loading="eager"

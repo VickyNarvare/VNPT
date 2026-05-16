@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React and Vite. Showcasing frontend development skills, projects, and services.
 
-<img src="public/images/VickyNarvare.webp" alt="Portfolio Preview" width="150" />
+<img src="public/images/VickyNarvare.png" alt="Portfolio Preview" width="150" />
 
 ## 🚀 Live Demo
 

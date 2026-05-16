@@ -2,10 +2,10 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="/images/VickyNarvare.webp"/>
-      <square150x150logo src="/images/VickyNarvare.webp"/>
-      <square310x310logo src="/images/VickyNarvare.webp"/>
-      <wide310x150logo src="/images/VickyNarvare.webp"/>
+      <square70x70logo src="/images/VickyNarvare.png"/>
+      <square150x150logo src="/images/VickyNarvare.png"/>
+      <square310x310logo src="/images/VickyNarvare.png"/>
+      <wide310x150logo src="/images/VickyNarvare.png"/>
       <TileColor>#4070f4</TileColor>
     </tile>
   </msapplication>
