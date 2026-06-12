@@ -1,15 +1,15 @@
 // Technologies Data for Marquee - Simplified to core stack
 export const technologies = [
-  { name: 'MongoDB', color: '#47A248', icon: 'bx-data' },
-  { name: 'Express.js', color: '#000000', icon: 'bx-code-alt' },
+  { name: 'MongoDB', color: '#47A248', icon: 'bxl-mongo-db' },
+  { name: 'Express.js', color: '#000000', icon: 'bxl-express' },
   { name: 'React', color: '#61DAFB', icon: 'bxl-react' },
   { name: 'Node.js', color: '#339933', icon: 'bxl-nodejs' },
   { name: 'JavaScript', color: '#F7DF1E', icon: 'bxl-javascript' },
   { name: 'Tailwind CSS', color: '#06B6D4', icon: 'bxl-tailwind-css' },
   { name: 'Git', color: '#F05032', icon: 'bxl-git' },
-  { name: 'REST API', color: '#FF6B6B', icon: 'bx-code-block' },
   { name: 'MySQL', color: '#4479A1', icon: 'bx-data' },
-  { name: 'Next.js', color: '#000000', icon: 'bx-code-alt' }
+  { name: 'HTML5', color: '#E34C26', icon: 'bxl-html5' },
+  { name: 'CSS3', color: '#1572B6', icon: 'bxl-css3' }
 ];
 
 // Projects Data

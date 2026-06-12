@@ -1,82 +1,95 @@
 # Vicky Narvare - Portfolio Website
 
-A modern, responsive portfolio website built with React and Vite. Showcasing frontend development skills, projects, and services.
+A modern, responsive portfolio website built with React and Vite. Showcasing full-stack MERN development skills, projects, and services.
 
 <img src="public/images/VickyNarvare.png" alt="Portfolio Preview" width="150" />
 
 ## 🚀 Live Demo
 
-[https://vickynarvare.vercel.app](https://vickynarvare.vercel.app)
+[https://vicky-narvare.vercel.app](https://vickynarvare.vercel.app)
 
 ## ✨ Features
 
-- **Responsive Design** - Works seamlessly on all devices
+- **Responsive Design** - Seamless experience across all devices (mobile, tablet, desktop)
 - **Dark/Light Theme** - Toggle between themes with localStorage persistence
-- **Smooth Animations** - CSS animations and transitions
+- **Smooth Animations** - CSS animations and GSAP transitions
 - **Loading Screen** - Animated loading screen on initial load
 - **Tech Marquee** - Auto-scrolling technology showcase
 - **Typing Effect** - Dynamic typing animation in hero section
 - **Toast Notifications** - React Toastify for user feedback
-- **Contact Form** - Form with validation
+- **Contact Form** - Form with email validation
 - **Floating Social Links** - Quick access to social profiles
+- **FAQ Section** - Common questions answered
+- **Resume Section** - Professional experience and education
+- **Scroll-to-Top** - Easy navigation back to top
 
 ## 🛠️ Tech Stack
 
-- **React 19** - UI Library
-- **Vite** - Build Tool
-- **React Icons** - Icon Library
-- **React Toastify** - Toast Notifications
-- **CSS3** - Styling with CSS Variables
-- **GSAP** - Animation Library (optional)
+- **React 19** - Modern UI Library with hooks
+- **Vite** - Lightning-fast build tool
+- **React Icons** - Comprehensive icon library
+- **React Toastify** - Toast notifications
+- **CSS3 + Variables** - Styling with custom properties
+- **GSAP** - Advanced animation library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Node.js 18+** - Backend runtime
 
 ## 📁 Project Structure
 
 ```
 src/
 ├── components/
-│   ├── About.jsx
-│   ├── Contact.jsx
-│   ├── FloatingSocial.jsx
-│   ├── Footer.jsx
-│   ├── Hero.jsx
-│   ├── LoadingScreen.jsx
-│   ├── Navbar.jsx
-│   ├── Projects.jsx
-│   ├── Services.jsx
-│   └── Skills.jsx
+│   ├── About.jsx           # Personal introduction
+│   ├── Contact.jsx         # Contact form section
+│   ├── FAQ.jsx             # Frequently asked questions
+│   ├── FloatingSocial.jsx  # Floating social links
+│   ├── Footer.jsx          # Footer section
+│   ├── Hero.jsx            # Hero section with typing effect
+│   ├── LoadingScreen.jsx   # Initial loading animation
+│   ├── Navbar.jsx          # Navigation bar
+│   ├── Projects.jsx        # Projects showcase
+│   ├── Resume.jsx          # Resume/experience section
+│   ├── ScrollToTop.jsx     # Scroll-to-top button
+│   ├── SectionHeader.jsx   # Reusable section header
+│   ├── Services.jsx        # Services offered
+│   └── Skills.jsx          # Technical skills
 ├── context/
-│   └── ThemeContext.jsx
+│   └── ThemeContext.jsx    # Theme management (dark/light)
 ├── data/
-│   └── index.js
+│   └── index.js            # Centralized data (projects, skills, etc.)
 ├── hooks/
-│   └── useTypingEffect.js
-├── App.jsx
-├── App.css
-├── index.css
-└── main.jsx
+│   ├── useInView.js        # Intersection observer hook
+│   └── useTypingEffect.js  # Typing animation hook
+├── styles/
+│   └── index.js            # Centralized styles
+├── App.jsx                 # Main app component
+├── App.css                 # Global styles
+├── index.css               # Reset and base styles
+└── main.jsx                # React entry point
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn
+- Node.js 18 or higher
+- npm or yarn package manager
 
 ### Installation
 
 1. Clone the repository
-```bash
+
 git clone https://github.com/VickyNarvare/portfolio.git
 cd portfolio
-```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Start development server
+
 ```bash
 npm run dev
 ```
@@ -97,31 +110,44 @@ npm run preview
 
 ## 📝 Customization
 
-### Update Personal Info
+### Update Personal Information
 
-Edit `src/data/index.js` to update:
-- Projects data
-- Skills data
-- Services data
-- Social links
-- Technologies for marquee
+Edit `src/data/index.js` to customize:
+
+- **Projects** - Add/edit portfolio projects
+- **Skills** - Update technical skills by category
+- **Services** - Modify services offered
+- **Social Links** - Update social media profiles
+- **Technologies** - Add/remove tech for marquee
 
 ### Update Styles
 
-Edit `src/App.css` to customize:
-- Colors (CSS variables in `:root`)
-- Fonts
-- Spacing
-- Animations
+Edit `src/App.css` and component-specific CSS files:
 
-## 📱 Sections
+- **CSS Variables** - Modify colors, fonts, spacing in `:root`
+- **Animations** - Customize animation timings and effects
+- **Responsive Breakpoints** - Adjust for different screen sizes
+- **Theme Colors** - Update light/dark mode color schemes
 
-1. **Home** - Hero section with typing effect and tech marquee
-2. **About** - Personal introduction and image
-3. **Skills** - Technical skills categorized
-4. **Services** - Services offered with expandable cards
-5. **Projects** - Portfolio projects with links
-6. **Contact** - Contact form and social links
+### Update Content
+
+1. **Hero Section** - Modify intro text in `Hero.jsx`
+2. **About Section** - Update bio in `About.jsx`
+3. **Contact Form** - Configure email settings in `Contact.jsx`
+4. **Social Links** - Update in `FloatingSocial.jsx`
+
+## 📱 Page Sections
+
+| Section      | Description                                             |
+| ------------ | ------------------------------------------------------- |
+| **Home**     | Hero section with typing effect and MERN stack showcase |
+| **About**    | Personal introduction with profile image                |
+| **Skills**   | Technical skills categorized by expertise               |
+| **Services** | Services offered with expandable cards                  |
+| **Projects** | Portfolio projects with links and descriptions          |
+| **FAQ**      | Common questions and answers                            |
+| **Resume**   | Professional experience and education                   |
+| **Contact**  | Contact form and social media links                     |
 
 ## 🖼️ Projects Preview
 
@@ -135,12 +161,56 @@ Edit `src/App.css` to customize:
 
 ## 🎨 Color Scheme
 
-| Variable | Light Mode | Dark Mode |
-|----------|------------|-----------|
-| `--accent` | #4070f4 | #6ea8ff |
-| `--accent-2` | #3056d3 | #4a6ef7 |
-| `--body-color` | #e4e9f7 | #2c2c2d |
-| `--text-color` | #111 | #fff |
+| Variable       | Light Mode | Dark Mode |
+| -------------- | ---------- | --------- |
+| `--accent`     | #4070f4    | #6ea8ff   |
+| `--accent-2`   | #3056d3    | #4a6ef7   |
+| `--body-color` | #e4e9f7    | #2c2c2d   |
+| `--text-color` | #111       | #fff      |
+
+## ⚙️ Performance Optimizations
+
+- **Code Splitting** - Lazy loading of components
+- **CSS Variables** - Efficient theme switching
+- **Optimized Animations** - Hardware-accelerated transforms
+- **Image Optimization** - WebP format for faster loading
+- **Debounced Scroll Events** - Smooth scrolling performance
+- **Memoization** - Preventing unnecessary re-renders
+
+## 🔧 Available Scripts
+
+| Command           | Description                |
+| ----------------- | -------------------------- |
+| `npm run dev`     | Start development server   |
+| `npm run build`   | Build for production       |
+| `npm run preview` | Preview production build   |
+| `npm run lint`    | Run ESLint (if configured) |
+
+## 📦 Dependencies
+
+Key dependencies include:
+
+- `react` - UI library
+- `react-dom` - DOM rendering
+- `react-icons` - Icon components
+- `react-toastify` - Toast notifications
+- `gsap` - Animation library
+- `vite` - Build tool
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🔐 Security
+
+- No sensitive data stored locally
+- Contact form uses secure backend endpoint
+- Environment variables for API keys
+- Content Security Policy headers recommended
 
 ## 📄 License
 
@@ -148,12 +218,28 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Vicky Narvare**
+**Vicky Narvare** - Full Stack MERN Developer
 
-- Website: [vickynarvare.vercel.app](https://vickynarvare.vercel.app)
-- GitHub: [@VickyNarvare](https://github.com/VickyNarvare)
-- LinkedIn: [Vicky Narvare](https://www.linkedin.com/in/vicky-narvare-4a7712395)
+- **Website**: [vickynarvare.vercel.app](https://vickynarvare.vercel.app)
+- **GitHub**: [@VickyNarvare](https://github.com/VickyNarvare)
+- **LinkedIn**: [Vicky Narvare](https://www.linkedin.com/in/vicky-narvare-4a7712395)
+- **Email**: [contact@vickynarvare.com](mailto:contact@vickynarvare.com)
+- **Location**: Indore, India
+
+## 🙏 Acknowledgments
+
+- React community for excellent documentation
+- Vite team for amazing build tool
+- All contributors and users who provided feedback
+
+## 📞 Support
+
+Found a bug? Have a suggestion? Feel free to:
+
+- Open an [issue](https://github.com/VickyNarvare/portfolio/issues)
+- Submit a [pull request](https://github.com/VickyNarvare/portfolio/pulls)
+- Contact via website
 
 ---
 
-⭐ Star this repo if you like it!
+⭐ **If you like this portfolio, please star the repository!** ⭐

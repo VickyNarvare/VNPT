@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
 import { technologies, typingTexts } from '../data';
-import { FiGitBranch, FiGithub, FiLayout, FiSmartphone, FiPlay } from 'react-icons/fi';
+import { FiGitBranch, FiGithub } from 'react-icons/fi';
 import { BsMouse } from 'react-icons/bs';
 import { FaCss3Alt } from 'react-icons/fa';
-import { 
-  SiHtml5, SiJavascript, SiSass, SiTailwindcss, SiReact, SiNextdotjs,
-  SiFigma, SiNpm, SiSublimetext, SiGooglechrome, SiCanva, SiMysql, SiGreensock,
-  SiMongodb, SiExpress, SiNodedotjs
+import {
+  SiHtml5, SiJavascript, SiTailwindcss, SiReact,
+  SiMysql, SiMongodb, SiExpress, SiNodedotjs
 } from 'react-icons/si';
-import { VscVscode } from 'react-icons/vsc';
 import styles from '../styles/Hero.module.css';
 import anim from '../styles/animations.module.css';
 
@@ -25,23 +23,14 @@ const iconMap = {
   'bxl-html5': SiHtml5,
   'bxl-css3': FaCss3Alt,
   'bxl-javascript': SiJavascript,
-  'bxl-sass': SiSass,
-  'bxl-tailwind-css': SiTailwindcss,
   'bxl-react': SiReact,
-  'bx-code-alt': SiNextdotjs,
   'bxl-git': FiGitBranch,
   'bxl-github': FiGithub,
-  'bxl-figma': SiFigma,
-  'bxl-nodejs': SiNpm,
-  'bx-code': SiSublimetext,
-  'bxl-chrome': SiGooglechrome,
+  'bxl-nodejs': SiNodedotjs,
+  'bxl-mongo-db': SiMongodb,
+  'bxl-express': SiExpress,
+  'bxl-tailwind-css': SiTailwindcss,
   'bx-data': SiMysql,
-  'bx-image': SiCanva,
-  'bx-movie-play': SiGreensock,
-  'bx-palette': FiLayout,
-  'bx-devices': FiSmartphone,
-  'bxl-visual-studio': VscVscode,
-  'bx-play-circle': FiPlay,
 };
 
 // Create tripled array for seamless marquee loop

@@ -18,12 +18,14 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
   }, []);
+
   return (
     <ThemeProvider>
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
