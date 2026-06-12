@@ -4,7 +4,11 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.1) 0%,
+    rgba(5, 150, 105, 0.1) 100%
+  );
   border: 2px solid rgba(16, 185, 129, 0.3);
   border-radius: 15px;
   margin-bottom: 3rem;
@@ -32,7 +36,8 @@
 }
 
 @keyframes pulseIcon {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
   }
@@ -112,7 +117,8 @@
   gap: 0.3rem;
   margin-left: 0.5rem;
   font-size: 0.85rem;
-  transition: scale .2s ease-in-out;}
+  transition: scale 0.2s ease-in-out;
+}
 
 .copyEmailBtn:hover {
   scale: 1.2;
@@ -123,27 +129,6 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
-}
-
-.quickActions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.actionBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: var(--gradient-primary);
-  color: white;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s var(--transition-smooth);
-  box-shadow: var(--shadow-md);
 }
 
 .actionBtn:hover {
@@ -220,7 +205,7 @@
 }
 
 .tooltip::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 50%;
@@ -285,12 +270,6 @@
   }
 }
 
-.contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 .formGroup input,
 .formGroup textarea {
   width: 100%;
@@ -320,10 +299,6 @@
   opacity: 0.7;
 }
 
-.contactBtn {
-  font-weight: 600;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .availabilityNotice {
@@ -333,15 +308,6 @@
 
   .availabilityNoticeContent h3 {
     font-size: 1.2rem;
-  }
-
-  .quickActions {
-    flex-direction: column;
-  }
-
-  .actionBtn {
-    width: 100%;
-    justify-content: center;
   }
 
   .contactFormWrapper {

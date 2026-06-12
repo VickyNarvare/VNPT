@@ -1,6 +1,4 @@
 /* ===== GLOBAL STYLES ===== */
-/* This file contains all global/default styles that apply to the entire app */
-
 /* ===== Fonts ===== */
 @font-face {
   font-family: "LatoRegular";
@@ -26,7 +24,7 @@
   --text-color: #0f172a;
   --text-secondary: #475569;
   --muted: rgba(15, 23, 42, 0.6);
-  
+
   /* Primary Colors - Modern Purple/Blue */
   --primary-50: #f0f9ff;
   --primary-100: #e0f2fe;
@@ -38,7 +36,7 @@
   --primary-700: #0369a1;
   --primary-800: #075985;
   --primary-900: #0c4a6e;
-  
+
   /* Accent Colors - Vibrant Purple */
   --accent-50: #faf5ff;
   --accent-100: #f3e8ff;
@@ -50,7 +48,7 @@
   --accent-700: #7e22ce;
   --accent-800: #6b21a8;
   --accent-900: #581c87;
-  
+
   /* Main Theme Colors */
   --main-color: #0ea5e9;
   --accent: #0ea5e9;
@@ -58,26 +56,40 @@
   --accent-3: #0284c7;
   --accent-purple: #a855f7;
   --accent-purple-light: #c084fc;
-  
+
   /* Background Colors */
   --card-bg: rgba(255, 255, 255, 0.9);
   --card-bg-hover: rgba(255, 255, 255, 1);
   --card-border: rgba(14, 165, 233, 0.1);
   --page-bg-top: #f8fafc;
   --page-bg-bottom: #f1f5f9;
-  
+
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(14, 165, 233, 0.08), 0 1px 2px rgba(14, 165, 233, 0.06);
-  --shadow-md: 0 4px 6px rgba(14, 165, 233, 0.1), 0 2px 4px rgba(14, 165, 233, 0.06);
-  --shadow-lg: 0 10px 15px rgba(14, 165, 233, 0.12), 0 4px 6px rgba(14, 165, 233, 0.08);
-  --shadow-xl: 0 20px 25px rgba(14, 165, 233, 0.15), 0 10px 10px rgba(14, 165, 233, 0.08);
-  
+  --shadow-sm:
+    0 1px 3px rgba(14, 165, 233, 0.08), 0 1px 2px rgba(14, 165, 233, 0.06);
+  --shadow-md:
+    0 4px 6px rgba(14, 165, 233, 0.1), 0 2px 4px rgba(14, 165, 233, 0.06);
+  --shadow-lg:
+    0 10px 15px rgba(14, 165, 233, 0.12), 0 4px 6px rgba(14, 165, 233, 0.08);
+  --shadow-xl:
+    0 20px 25px rgba(14, 165, 233, 0.15), 0 10px 10px rgba(14, 165, 233, 0.08);
+
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #a855f7 100%);
-  --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e9d5ff 100%);
+  --gradient-primary: linear-gradient(
+    135deg,
+    #0ea5e9 0%,
+    #38bdf8 50%,
+    #a855f7 100%
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #a855f7 0%,
+    #c084fc 50%,
+    #e9d5ff 100%
+  );
   --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   --gradient-bg: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-  
+
   /* Other */
   --max-width: 1200px;
   --radius: 16px;
@@ -114,8 +126,18 @@ body {
   background: var(--gradient-bg);
   background-attachment: fixed;
   color: var(--text-color);
-  transition: background 0.6s var(--transition-smooth), color 0.6s var(--transition-smooth);
-  font-family: "LatoRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  transition:
+    background 0.6s var(--transition-smooth),
+    color 0.6s var(--transition-smooth);
+  font-family:
+    "LatoRegular",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -134,7 +156,7 @@ body.dark {
   --text-color: #f8fafc;
   --text-secondary: #cbd5e1;
   --muted: rgba(248, 250, 252, 0.6);
-  
+
   /* Main Theme Colors for Dark - Matching light mode intensity */
   --main-color: #0ea5e9;
   --accent: #0ea5e9;
@@ -142,23 +164,35 @@ body.dark {
   --accent-3: #0284c7;
   --accent-purple: #a855f7;
   --accent-purple-light: #c084fc;
-  
+
   /* Background Colors for Dark */
   --card-bg: rgba(17, 24, 39, 0.9);
   --card-bg-hover: rgba(17, 24, 39, 1);
   --card-border: rgba(14, 165, 233, 0.15);
   --page-bg-top: #0a0f1e;
   --page-bg-bottom: #111827;
-  
+
   /* Shadows for Dark - Softer shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(14, 165, 233, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(14, 165, 233, 0.15);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.6), 0 4px 6px rgba(14, 165, 233, 0.2);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.7), 0 10px 10px rgba(14, 165, 233, 0.25);
-  
+  --shadow-lg:
+    0 10px 15px rgba(0, 0, 0, 0.6), 0 4px 6px rgba(14, 165, 233, 0.2);
+  --shadow-xl:
+    0 20px 25px rgba(0, 0, 0, 0.7), 0 10px 10px rgba(14, 165, 233, 0.25);
+
   /* Gradients for Dark - Same colors as light mode */
-  --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #a855f7 100%);
-  --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #e9d5ff 100%);
+  --gradient-primary: linear-gradient(
+    135deg,
+    #0ea5e9 0%,
+    #38bdf8 50%,
+    #a855f7 100%
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #a855f7 0%,
+    #c084fc 50%,
+    #e9d5ff 100%
+  );
   --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
   --gradient-bg: linear-gradient(180deg, #0a0f1e 0%, #111827 100%);
 }
@@ -218,47 +252,6 @@ body.dark {
   color: var(--text-color);
   font-family: "LucyRose", Georgia, "Times New Roman", serif;
   letter-spacing: 1px;
-}
-
-.accent-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* ===== Button Styles ===== */
-.btn {
-  padding: 14px 28px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s var(--transition-smooth);
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  letter-spacing: 0.3px;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-
-.btn:active::before {
-  width: 300px;
-  height: 300px;
 }
 
 .btn-primary {
@@ -351,10 +344,6 @@ body.dark {
   .section-title {
     font-size: 2rem;
   }
-
-  .btn {
-    max-width: 200px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -369,22 +358,10 @@ body.dark {
   .section-title {
     font-size: 2rem;
   }
-
-  .btn {
-    max-width: 180px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
 }
 
 @media (max-width: 360px) {
   .section-title {
     font-size: 1.8rem;
-  }
-
-  .btn {
-    max-width: 160px;
-    padding: 9px 18px;
-    font-size: 0.85rem;
   }
 }

@@ -620,14 +620,6 @@
   }
 }
 
-.scrollText {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-color);
-  opacity: 0.6;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
 
 .scrollDown:hover .scrollMouse {
   color: var(--accent-2);
@@ -652,9 +644,6 @@
     height: 6px;
   }
 
-  .scrollText {
-    font-size: 0.65rem;
-  }
 }
 
 @media (max-width: 480px) {

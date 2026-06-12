@@ -108,7 +108,9 @@
 
 /* Card wrapper handles the entrance animation */
 .cardWrapper {
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -159,8 +161,12 @@
 }
 
 @keyframes shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .cardImage {
@@ -185,7 +191,11 @@
   left: 0;
   right: 0;
   padding: 10px 18px;
-  background: linear-gradient(to top, rgba(10, 15, 30, 0.75) 0%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 15, 30, 0.75) 0%,
+    transparent 100%
+  );
   z-index: 2;
   transition: opacity 0.3s ease;
 }
@@ -210,7 +220,12 @@
 .cardOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 15, 30, 0.95) 0%, rgba(10, 15, 30, 0.7) 50%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 15, 30, 0.95) 0%,
+    rgba(10, 15, 30, 0.7) 50%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -221,27 +236,16 @@
 }
 
 :global(body.dark) .cardOverlay {
-  background: linear-gradient(to top, rgba(10, 15, 30, 0.98) 0%, rgba(10, 15, 30, 0.8) 50%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 15, 30, 0.98) 0%,
+    rgba(10, 15, 30, 0.8) 50%,
+    transparent 100%
+  );
 }
 
 .projectCard:hover .cardOverlay {
   opacity: 1;
-}
-
-.cardTitle {
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: "LucyRose", serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  transform: translateY(20px);
-  transition: transform 0.4s ease;
-}
-
-.projectCard:hover .cardTitle {
-  transform: translateY(0);
 }
 
 .cardSubtitle {
@@ -300,7 +304,7 @@
 }
 
 .viewMore::after {
-  content: '→';
+  content: "→";
   font-size: 1rem;
   transition: transform 0.3s ease;
 }
@@ -318,7 +322,6 @@
   transform: translateX(4px);
 }
 
-
 /* ===== MODAL STYLES ===== */
 .modalOverlay {
   position: fixed;
@@ -335,8 +338,12 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modalContent {
@@ -527,7 +534,7 @@
 }
 
 .featuresList li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -643,7 +650,8 @@
   flex-wrap: wrap;
 }
 
-.btnDemo, .btnCode {
+.btnDemo,
+.btnCode {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -679,7 +687,6 @@
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
-
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
@@ -720,11 +727,6 @@
 
   .cardStripTitle {
     font-size: 0.75rem;
-  }
-
-  .cardTitle {
-    font-size: 1rem;
-    margin-bottom: 8px;
   }
 
   .cardOverlay {
@@ -775,7 +777,8 @@
     font-size: 1.1rem;
   }
 
-  .btnDemo, .btnCode {
+  .btnDemo,
+  .btnCode {
     padding: 10px 18px;
     font-size: 0.85rem;
   }
@@ -807,11 +810,6 @@
 
   .cardOverlay {
     padding: 12px;
-  }
-
-  .cardTitle {
-    font-size: 0.9rem;
-    margin-bottom: 6px;
   }
 
   .cardTech {
@@ -877,7 +875,8 @@
     flex-direction: column;
   }
 
-  .btnDemo, .btnCode {
+  .btnDemo,
+  .btnCode {
     width: 100%;
     justify-content: center;
     padding: 11px 16px;

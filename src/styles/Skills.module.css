@@ -3,35 +3,6 @@
   padding: 100px 0;
 }
 
-.skillsSectionTitle {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--text-color);
-  text-align: center;
-  margin-bottom: 10px;
-  font-family: "LucyRose", serif;
-}
-
-.skillsSectionTitle span {
-  color: var(--accent);
-}
-
-.skillsTitleUnderline {
-  width: 60px;
-  height: 3px;
-  background: var(--accent);
-  margin: 0 auto 15px;
-  border-radius: 10px;
-}
-
-.skillsSectionSubtitle {
-  font-size: 17px;
-  color: var(--text-color);
-  text-align: center;
-  margin-bottom: 50px;
-  opacity: 0.7;
-}
-
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,7 +12,8 @@
 
 /* Floating Animation */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -55,7 +27,7 @@
   background: rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(31, 38, 135, 0.15),
     inset 0 0 0 1px rgba(255, 255, 255, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,16 +38,30 @@
 }
 
 /* Staggered animation delays for each card */
-.codeCard:nth-child(1) { animation-delay: 0s; }
-.codeCard:nth-child(2) { animation-delay: 0.5s; }
-.codeCard:nth-child(3) { animation-delay: 1s; }
-.codeCard:nth-child(4) { animation-delay: 1.5s; }
-.codeCard:nth-child(5) { animation-delay: 2s; }
-.codeCard:nth-child(6) { animation-delay: 2.5s; }
-.codeCard:nth-child(7) { animation-delay: 3s; }
+.codeCard:nth-child(1) {
+  animation-delay: 0s;
+}
+.codeCard:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.codeCard:nth-child(3) {
+  animation-delay: 1s;
+}
+.codeCard:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.codeCard:nth-child(5) {
+  animation-delay: 2s;
+}
+.codeCard:nth-child(6) {
+  animation-delay: 2.5s;
+}
+.codeCard:nth-child(7) {
+  animation-delay: 3s;
+}
 
 .codeCard::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -93,7 +79,7 @@
 :global(body.dark) .codeCard {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.4),
     inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
@@ -142,28 +128,44 @@
   gap: 8px;
 }
 
-.dotRed, .dotYellow, .dotGreen {
+.dotRed,
+.dotYellow,
+.dotGreen {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   transition: all 0.2s ease;
 }
 
-.dotRed { background: #ff5f56; }
-.dotYellow { background: #ffbd2e; }
-.dotGreen { background: #27ca40; }
+.dotRed {
+  background: #ff5f56;
+}
+.dotYellow {
+  background: #ffbd2e;
+}
+.dotGreen {
+  background: #27ca40;
+}
 
-.codeCard:hover .dotRed { background: #ff3b30; box-shadow: 0 0 8px #ff3b30; }
-.codeCard:hover .dotYellow { background: #ff9500; box-shadow: 0 0 8px #ff9500; }
-.codeCard:hover .dotGreen { background: #34c759; box-shadow: 0 0 8px #34c759; }
+.codeCard:hover .dotRed {
+  background: #ff3b30;
+  box-shadow: 0 0 8px #ff3b30;
+}
+.codeCard:hover .dotYellow {
+  background: #ff9500;
+  box-shadow: 0 0 8px #ff9500;
+}
+.codeCard:hover .dotGreen {
+  background: #34c759;
+  box-shadow: 0 0 8px #34c759;
+}
 
 .fileName {
   font-size: 0.8rem;
   color: var(--text-color);
   opacity: 0.8;
-  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
 }
-
 
 /* Code Content */
 .codeContent {
@@ -171,7 +173,7 @@
   z-index: 1;
   display: flex;
   padding: 16px 0;
-  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
   font-size: 0.9rem;
   line-height: 1.7;
   min-height: 180px;
@@ -292,15 +294,6 @@
     gap: 20px;
   }
 
-  .skillsSectionTitle {
-    font-size: 2rem;
-  }
-
-  .skillsSectionSubtitle {
-    font-size: 15px;
-    margin-bottom: 35px;
-  }
-
   .codeContent {
     font-size: 0.85rem;
     min-height: 150px;
@@ -321,15 +314,6 @@
     padding: 60px 0;
   }
 
-  .skillsSectionTitle {
-    font-size: 1.75rem;
-  }
-
-  .skillsSectionSubtitle {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-  }
-
   .codeHeader {
     padding: 10px 12px;
   }
@@ -338,7 +322,9 @@
     gap: 6px;
   }
 
-  .dotRed, .dotYellow, .dotGreen {
+  .dotRed,
+  .dotYellow,
+  .dotGreen {
     width: 10px;
     height: 10px;
   }
@@ -365,17 +351,9 @@
   .indent {
     width: 16px;
   }
-
-  .skillsTitleUnderline {
-    width: 50px;
-  }
 }
 
 @media (max-width: 360px) {
-  .skillsSectionTitle {
-    font-size: 1.5rem;
-  }
-
   .codeContent {
     font-size: 0.7rem;
   }
